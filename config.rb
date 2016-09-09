@@ -1,12 +1,5 @@
 activate :livereload
 
-# KSS Styleguide Configuration
-set :markdown_engine, :redcarpet
-activate :kss, :kss_dir => 'stylesheets/modules',
-  :styleblock_path => 'styleblocks'
-
-page "/styleguide/*", layout: "styleguide"
-
 ###
 # Helpers
 ###
