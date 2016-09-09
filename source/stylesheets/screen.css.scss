@@ -52,11 +52,17 @@
 
 .main-content {
   @include outer-container;
-  h1 {
-    @include span-columns(3);
-  }
 } //main-content
 
 header {
   padding-top: 20px;
 }
+
+.ctas {
+}
+
+.cta {
+  @include span-columns(4);
+}
+
+
