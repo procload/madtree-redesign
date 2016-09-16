@@ -24,6 +24,7 @@
 </head>
 <body class="<%= page_classes %> <%= yield_content :page_classes %>">
 
+  <%= partial "partials/toolbar" %>
   <header class="site-header">
   </header>
   <!-- /site-header -->
@@ -32,8 +33,7 @@
     <%= yield %>
   </div><!-- /main-content -->
 
-  <footer class="site-footer">
-  </footer><!-- /site-footer -->
+  <%= partial "partials/footer" %>
 
   <%= javascript_include_tag "public" %>
   <script type="text/javascript">
