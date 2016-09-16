@@ -25,9 +25,7 @@
 <body class="<%= page_classes %> <%= yield_content :page_classes %>">
 
   <%= partial "partials/toolbar" %>
-  <header class="site-header">
-  </header>
-  <!-- /site-header -->
+  <%= partial "partials/header" %>
 
   <div class="main-content">
     <%= yield %>
