@@ -1,0 +1,84 @@
+---
+description: ""
+sub_nav: true
+store: true
+---
+<% content_for :meta_information do %>
+  <meta property="og:title" content='MadTree Brewing' />
+  <meta property="og:image" content='http://madtreebrewing.com/images/cans.png' />
+  <meta property="og:url" content='http://madtreebrewing.com/'/>
+  <meta property="og:description" content='Bringing canned craft beer to Cincinnati.' />
+  <meta name="description" content='Bringing canned craft beer to Cincinnati.' />
+<% end %>
+
+<section class="product-images">
+  <div class="main-product-image">
+    <%= image_tag "http://placehold.it/540x511" %>
+  </div> <!-- /main-product-image -->
+
+  <div class="product-image-thumbs">
+    <% 4.times do %>
+      <%= link_to image_tag("http://placehold.it/90x90"), "#" %>
+    <% end %>
+  </div> <!-- /product-image-thumbs -->
+</section> <!-- /product-images -->
+
+<section class="product-details">
+  <h2>Item Name</h2>
+  <span class="price">$22</span>
+
+  <div class="product-description">
+    <p>Donec nec tempus dui, vitae sollicitudin lacus. Vestibulum malesuada ullamcorper ex in maximus. Aenean fermentum eros eu tincidunt rutrum. Cras hendrerit elementum tortor et aliquet. Duis vitae tellus ut ligula varius euismod vel vitae orci.</p> 
+  </div> <!-- /product-description -->
+
+  <div class="product-actions">
+
+    <form>
+      <div class="form-group">
+        <label for="size">Size</label>
+        <select class="form-control">
+          <option>Small</option>
+          <option>Medium</option>
+          <option>Large</option>
+        </select>
+        <a href="#" class="size-chart">Size Chart</a>
+      </div>
+
+      <div class="form-group">
+        <label for="size">Size</label>
+        <select class="form-control">
+          <option>Small</option>
+          <option>Medium</option>
+          <option>Large</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Add to Cart</button>
+    </form>
+  </div> <!-- /product-actions -->
+
+  <div class="product-specs">
+    <h3>Product Specs</h3>
+    <ul>
+      <% 4.times do %>
+      <li>Maecenas in purus fermentum augue.</li>
+      <% end %>
+    </ul>
+  </div> <!-- /product-specs -->
+
+  <div class="shipping">
+    <h3>Shipping & Handling</h3>
+    <p>In an effort to make your shopping experience more enjoyable, MadTree offers a flat rate shipping fee of $6.00 for all orders placed within the Continental United States.  For orders outside of that as well as international please contact us directly to determine shipping costs.</p>
+  </div> <!-- /shipping -->
+</section> <!-- product-details -->
+
+<section class="related-products">
+  <h3>Related Products</h3>
+
+  <div class="product-preview">
+    <%= link_to image_tag("http://placehold.it/170x170"), "#", class: "product-image" %>
+    <a href="#" class="preview-description">
+      <p>Product Name</p>
+      <span class="price">$22</span>
+    </a>
+  </div>
+</section> <!-- /related-products -->
