@@ -23,6 +23,14 @@
         <li><a href="#">Retired</a></li>
       </ul>
     <% end %>
+    <% if current_page.data.store? %>
+      <form class="search">
+        <div class="form-group">
+          <label for="search-store">Search Store</label>
+          <input id="search-store" type="search" placeholder="Search Store" class="form-control search">
+        </div>
+      </form>
+    <% end %>
     </nav> <!-- /site-nav -->
   </div> <!-- /container -->
 </header> <!-- /site-header -->
