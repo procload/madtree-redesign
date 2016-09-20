@@ -1,0 +1,103 @@
+---
+description: ""
+sub_nav: true
+---
+<% content_for :meta_information do %>
+  <meta property="og:title" content='MadTree Brewing' />
+  <meta property="og:image" content='http://madtreebrewing.com/images/cans.png' />
+  <meta property="og:url" content='http://madtreebrewing.com/'/>
+  <meta property="og:description" content='Bringing canned craft beer to Cincinnati.' />
+  <meta name="description" content='Bringing canned craft beer to Cincinnati.' />
+<% end %>
+
+<section class="page-hero">
+  <%= image_tag "http://placehold.it/1600x300" %>
+</section> <!-- /page-hero -->
+
+<section class="page-intro">
+  <header class="section-header">
+    <h2>Visit our Taproom</h2>
+    <p>Carryout, bar, cafe, family hangout, club meeting… the MadTree taproom is a little bit of everything. Whether you want to fill up your growler or meet up with some of your friends for dinner and a beer, we are happy to have you drop in. See below for the latest rotating taps.</p>
+  </header>
+
+  <div class="taproom-address">
+    <h4>Address</h4>
+    <p class="address">
+      <span class="street">5164 Kennedy Ave.</span>
+      <span class="city">Cincinnati, OH 45208</span>
+    </p>
+  </div> <!-- /taproom-address -->
+
+  <div class="taproom-phone">
+    <h4>Phone</h4>
+    <p itemprop="telephone"><a href="tel:+5555555555">555-555-5555</a></p>
+  </div> <!-- /taproom-phone -->
+</section> <!-- page-intro -->
+
+<section class="taproom-hours">
+  <h4>Taproom Hours</h4>
+  <div class="day">
+    <% 6.times do %>
+      <h4>Tuesday</h4>
+      <span class="hours">4pm—11pm</span>
+    <% end %>
+  </div>
+</section> <!-- /taproom-hours -->
+
+<section class="private-events">
+  <header class="section-header">
+    <h3>Private Events</h3>
+    <p>Morbi lobortis lectus nisl, ut aliquet nisi finibus at. Sed porttitor, elit sit amet consectetur fringilla, sapien nisl posuere urna, eget auctor ante nisl vitae felis. Duis sed egestas.</p>
+  </header>
+  <%= link_to "More About Events", "#", class: "btn btn-primary" %>
+</section> <!-- /private-events -->
+
+<section class="food">
+  <header class="section-header">
+    <h3>Food</h3>
+    <p>Catch-a-Fire Pizza provides Cincinnati’s finest wood-fired craft pizzas, from a mobile platform year round. By focusing on classical technique combined with the finest ingredients, Catch-a-Fire Pizza produces traditional Napoletana style cooked to order pizzas and original “hand-food” that is healthy, artisan cuisine for people on the go. To view menu, click here.</p>
+  </header>
+
+  <h4>Catch-a-Fire Hours</h4>
+  <div class="cafe-hours">
+    <% 6.times do %>
+     <span class="day"><strong>Tuesday</strong> 4pm–11pm</span>
+    <% end %>
+  </div>
+  <%= link_to "Visit Catch-a-Fire Website", "#", class: "btn btn-primary" %>
+</section> <!-- /food -->
+
+
+<section class="on-tap">
+  <header class="section-header">
+    <h3>What's on Tap</h3>
+    <p>Morbi porttitor consequat iaculis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+  </header>
+
+  <% 20.times do %>
+  <div class="on-tap-beer">
+    <a data-container="body"
+      data-toggle="popover"
+      data-placement="top"
+      data-html="true"
+      title="Beer Prices"
+      data-content='
+        <strong class="size">Pint <span class="price">$6</span></strong>
+        <strong class="size">Snifter <span class="price">$6</span></strong>
+        <strong class="size">Taster <span class="price">$6</span></strong>
+        <strong class="size">64oz Growler <span class="price">$6</span></strong>
+        <strong class="size">40oz Growler <span class="price">$6</span></strong>
+        <strong class="size">32oz Growler <span class="price">$6</span></strong>
+      '>
+      <h4>Sol Drifter</h4>
+      <p class="style">Blonde Ale with Strawberries</p>
+      <span class="abv">
+        <strong>ABV</strong>: 4.6%
+      </span>
+      <span class"ibu">
+        <strong>IBUS</strong>: 34
+      </span>
+    </a>
+  </div> <!-- /on-tap-beer -->
+  <% end %>
+</section> <!-- /on-tap -->
