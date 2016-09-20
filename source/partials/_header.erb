@@ -11,6 +11,18 @@
         <li><a href="#">Taproom</a></li>
         <li><a href="#">Blog</a></li>
       </ul> <!-- /nav-list -->
+    <% if current_page.data.sub_nav? %>
+      <ul class="subnav nav-list">
+        <li><a href="#">Happy Amber</a></li>
+        <li><a href="#">Lift</a></li>
+        <li><a href="#">PSA</a></li>
+        <li><a href="#">Psychopathy</a></li>
+        <li><a href="#">Seasonal</a></li>
+        <li><a href="#">Limited Draft</a></li>
+        <li><a href="#">Series</a></li>
+        <li><a href="#">Retired</a></li>
+      </ul>
+    <% end %>
     </nav> <!-- /site-nav -->
   </div> <!-- /container -->
 </header> <!-- /site-header -->
