@@ -14,59 +14,42 @@ store: true
 <section class="page-marketing">
   <% 3.times do %>
   <div class="marketing-pane">
-    <h3>PSA Now in Kegs</h3>
+    <h3>New Madtree Prints</h3>
     <p>Vestibulum a augue cursus, finibus Quisque fermentum varius rutrum sed.</p>
   </div>
   <% end %>
 </section> <!-- /page-marketing -->
 
-<section class="core-beers">
-  <h3>Our Front Runners</h3>
+<section class="store-categories">
+  <h3>Shop by Category</h3>
 
-  <% 7.times do %>
+  <% 5.times do %>
   <div class="beer-preview">
-    <%= link_to image_tag("http://placehold.it/180x220"), "#" %>
-    <h5>Happy Amber</h5>
-  </div> <!-- beer-preview -->
+    <%= link_to image_tag("http://placehold.it/125x125"), "#" %>
+    <h5><%= link_to "Apparel", "#" %></h5>
+  </div> <!-- category-preview -->
   <% end %>
-</section> <!--/core-beers -->
+</section> <!-- /store-categories -->
 
-<section class="secondary-beers">
-  <h3>What's in Season</h3>
-
-  <% 4.times do %>
-  <div class="beer-preview">
-    <%= link_to image_tag("http://placehold.it/180x220"), "#" %>
-    <h5>Happy Amber</h5>
-  </div> <!-- beer-preview -->
+<section class="store-collections">
+  <h3>Shop by Collection</h3>
+  <% 3.times do %>
+  <div class="collection-preview">
+    <%= link_to image_tag("http://placehold.it/300x140"), "#" %>
+  </div> <!-- collection-preview -->
   <% end %>
+</section> <!-- /store-collections -->
 
-  <%= link_to "See All Seasonal", "#", class: "btn btn-primary" %>
-</section> <!-- seconadry-beers -->
+<section class="featured-products">
+  <h3>Featured Products</h3>
 
-<section class="browse-beers">
-  <h3>Browse Our Beer</h3>
-
-  <div class="beer-category">
-    <h4>Limited</h4>
-    <% 8.times do %>
-    <div class="beer-preview">
-      <%= link_to image_tag("http://placehold.it/110x150"), "#" %>
-      <h5>Happy Amber</h5>
-    </div>
-    <% end %>
-    <%= link_to "See All Limited", "#", class: "btn btn-primary" %>
+  <% 12.times do %>
+  <div class="item-preview">
+    <%= link_tag image_tag("http://placehold.it/160x275", "#") %>
+    <a href="#">
+      <p>Women's Logo T</p>
+      <span class="price">$18</span>
+    </a>
   </div>
-
-  <div class="beer-category">
-    <h4>Series</h4>
-    <% 8.times do %>
-    <div class="beer-preview">
-      <%= link_to image_tag("http://placehold.it/110x150"), "#" %>
-      <h5>Happy Amber</h5>
-    </div>
-    <% end %>
-    <%= link_to "See All Limited", "#", class: "btn btn-primary" %>
-  </div>
-</section>
-
+  <% end %>
+</section> <!-- /featured-products -->
