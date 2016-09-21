@@ -1,0 +1,42 @@
+---
+description: ""
+sub_nav: true
+---
+<% content_for :meta_information do %>
+  <meta property="og:title" content='MadTree Brewing' />
+  <meta property="og:image" content='http://madtreebrewing.com/images/cans.png' />
+  <meta property="og:url" content='http://madtreebrewing.com/'/>
+  <meta property="og:description" content='Bringing canned craft beer to Cincinnati.' />
+  <meta name="description" content='Bringing canned craft beer to Cincinnati.' />
+<% end %>
+
+<section class="page-hero">
+  <%= image_tag "http://placehold.it/1600x300" %>
+  <p>Interested in booking a taproom event? Or looking for sponsorship or charitable dontation? Email info@madtreebrewing.com for more information.</p>
+</section> <!-- /page-hero -->
+
+<div class="event-filter">
+  <div class="venue-filter">
+    <strong>Venue</strong>:
+    <a href="#" class="filter active">Taproom</a>
+    <a href="#" class="filter">Off-site</a>
+  </div>
+
+  <div class="location-filter">
+    <strong>Location</strong>:
+    <a href="#" class="filter active">Cincinnati</a>
+    <a href="#" class="filter">Columbus</a>
+    <a href="#" class="filter">Dayton</a>
+  </div>
+</div> <!-- /event-filter -->
+
+<section class="event-listing">
+  <% 12.times do %>
+  <div class="event">
+    <h6>Wednesday, August 1 at 4 p.m.</h6>
+    <h4>Hop Up Dinners at Madtree—Eli’s BBQ</h4>
+    <p>Join us every Tuesday evening for Hop Up Dinners featuring dinner prepared by chefs from the best restaurants in the city.</p>
+    <%= link_to "Read more", "#", class: "btn btn-primary btn-small" %>
+  </div> <!-- /event -->
+  <% end %>
+</section> <!-- /event-listing -->
