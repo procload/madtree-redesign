@@ -1,0 +1,34 @@
+
+---
+description: ""
+sub_nav: true
+---
+<% content_for :meta_information do %>
+  <meta property="og:title" content='MadTree Brewing' />
+  <meta property="og:image" content='http://madtreebrewing.com/images/cans.png' />
+  <meta property="og:url" content='http://madtreebrewing.com/'/>
+  <meta property="og:description" content='Bringing canned craft beer to Cincinnati.' />
+  <meta name="description" content='Bringing canned craft beer to Cincinnati.' />
+<% end %>
+
+<section class="page-hero">
+  <%= image_tag "http://placehold.it/1600x300" %>
+  <p>Interested in booking a taproom event? Or looking for sponsorship or charitable dontation? Email info@madtreebrewing.com for more information.</p>
+</section> <!-- /page-hero -->
+
+<section class="tours">
+  <h3>Tours</h3>
+  <p>MadTree offers tours to the public every Saturday at 12:30pm and 1:30pm.</p>
+
+  <div class="taproom-photos">
+    <% 8.times do %>
+      <%= link_to image_tag("http://placehold.it/100x100"), "#", class: "taproom-photo-thumb" %>
+    <% end %>
+  </div> <!-- /taproom-photos -->
+</section>
+
+<section class="private-events">
+  <h3>Private Events</h3>
+  <p>Interested in booking a private event? Vivamus commodo dictum lectus tincidunt accumsan. Nunc varius mattis lectus, sed accumsan.</p>
+  <%= link_to "Book a Private Event", "#", class: "btn btn-primary" %>
+</section>
