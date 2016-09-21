@@ -1,0 +1,45 @@
+---
+description: ""
+sub_nav: true
+---
+<% content_for :meta_information do %>
+  <meta property="og:title" content='MadTree Brewing' />
+  <meta property="og:image" content='http://madtreebrewing.com/images/cans.png' />
+  <meta property="og:url" content='http://madtreebrewing.com/'/>
+  <meta property="og:description" content='Bringing canned craft beer to Cincinnati.' />
+  <meta name="description" content='Bringing canned craft beer to Cincinnati.' />
+<% end %>
+
+<section class="page-hero">
+  <%= image_tag "http://placehold.it/1600x300" %>
+</section> <!-- /page-hero -->
+
+<section class="page-intro">
+  <header class="section-header">
+    <h2>Story Intro</h2>
+    <p>Donec turpis nulla, malesuada ut semper quis, faucibus sit amet odio. Duis malesuada ut est a varius. Ut nec placerat ipsum. Quisque eu feugiat dui. Cras nec turpis ultricies, euismod velit vel, porta augue.</p>
+  </header>
+</section> <!-- page-intro -->
+
+
+<section class="timeline">
+  <% 6.times do %>
+  <div class="timeline-entry">
+    <header class="timeline-header">
+      <h6>March, 2008</h6>
+      <h3>Section Title</h3>
+    </header>
+    <div class="timeline-photo">
+      <%= image_tag "http://placehold.it/430x220" %>
+    </div>
+    <div class="timeline-text">
+      <p>Curabitur ornare lacus vitae purus interdum congue. In eleifend massa ut lacus malesuada, nec sollicitudin nisi lacinia. Fusce erat quam, euismod nec lobortis molestie, sodales vel augue. Nullam bibendum dapibus lectus. Pellentesque interdum, dui et eleifend egestas, libero nisi ultrices felis, nec ullamcorper justo diam molestie lectus. Nam vitae nisl ut quam dignissim facilisis id sed eros.</p>
+    </div>
+  </div> <!-- /timeline-entry -->
+  <% end %>
+</section> <!-- /timeline -->
+
+<section class="page-outro">
+  <%= image_tag "http://placehold.it/1600x300" %>
+  <p>Donec turpis nulla, malesuada ut semper quis, faucibus sit amet odio. Duis malesuada ut est a varius. Ut nec placerat ipsum. Quisque eu feugiat dui. Cras nec turpis ultricies, euismod velit vel, porta augue.</p>
+</section> <!-- /page-outro -->
