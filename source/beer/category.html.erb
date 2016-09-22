@@ -1,0 +1,51 @@
+---
+description: ""
+sub_nav: true
+---
+<% content_for :meta_information do %>
+  <meta property="og:title" content='MadTree Brewing' />
+  <meta property="og:image" content='http://madtreebrewing.com/images/cans.png' />
+  <meta property="og:url" content='http://madtreebrewing.com/'/>
+  <meta property="og:description" content='Bringing canned craft beer to Cincinnati.' />
+  <meta name="description" content='Bringing canned craft beer to Cincinnati.' />
+<% end %>
+
+<h2>Seasonal</h2>
+
+<% 8.times do %>
+<div class="beer-summary">
+  <%= link_to image_tag("http://placehold.it/125x140"), "#", class: "beer-summary-image" %>
+  <div class="beer-summary-text">
+    <h4><a href="#">Galaxy High</a></h4>
+    <p>Maecenas sem metus, elementum a maximus in, tincidunt sit amet tellus. Nunc tincidunt magna et orci pellentesque lobortis. Proin lobortis, lectus et sollicitudin sollicitudin, erat lectus lobortis velit.</p>
+  </div>
+  <div class="beer-summary-stats">
+  <table class="beer-info-table">
+    <tr>
+      <th>Style</th>
+      <th>Availability</th>
+      <th>IBUs</th>
+      <th>ABV</th>
+    </tr>
+    <tr>
+      <td>Pale Ale</td>
+      <td>Year-round, 6-pack cans, Taproom</td>
+      <td>70</td>
+      <td>6.9%</td>
+    </tr>
+    <tr>
+      <th colspan="4">Hops</th>
+    </tr>
+    <tr>
+      <td colspan="4">Cascade, Chinook, Centennial</td>
+    </tr>
+    <tr>
+      <th colspan="4">Malts</th>
+    </tr>
+    <tr>
+      <td colspan="4">2-Row, Vienna, Caramel 40L, Carapils</td>
+    </tr>
+  </table>
+  </div>
+</div><!-- /beer-summary -->
+<% end %>
