@@ -45,31 +45,32 @@ h6, {
   margin: 0;
   line-height: 1.25;
   font-family: $font-family-headings;
+  text-transform: uppercase;
 }
 
 
 h1 {
-  font-size: 2.25em;
-  font-size: golden-ratio(14px,  1);
+  font-size: calc-em(60px);
 }
+
 h2 {
-  font-size: 1.5em;
+  font-size: calc-em(48px);
 }
+
 h3 {
-  font-size: 1.3em;
+  font-size: calc-em(20px);
 }
+
 h4 {
-  font-size: 1em;
-  text-transform: uppercase;
+  font-size: calc-em(18px);
 }
+
 h5 {
-  font-size: 1em;
-  margin-bottom: .25em;
+  font-size: calc-em(14px);
 }
+
 h6 {
-  font-size: 0.85em;
-  font-style: italic;
-  margin-bottom: .25em;
+  font-size: calc-em(12px);
 }
 
 h1 + h1,
