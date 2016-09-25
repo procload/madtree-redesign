@@ -73,4 +73,166 @@ header {
   @include span-columns(4);
 }
 
+// -------------------------------------
+//   Navlist
+// -------------------------------------
 
+.nav-list {
+  @extend %zero-list;
+}
+
+// -------------------------------------
+//   Address
+// -------------------------------------
+
+.address {
+  .street {
+    font-weight: bold;
+    display: block;
+  }
+}
+
+
+// -------------------------------------
+//   Toolbar
+// -------------------------------------
+.toolbar {
+  background: $gray-lightest;
+  font-size: calc-em(10px);
+  line-height: calc-em(30px, 10px);
+
+  .container {
+    @extend %group;
+  }
+
+  span {
+    color: $gray-dark;
+  }
+
+  strong {
+    text-transform: uppercase;
+  }
+
+  .taproom-hours,
+  .cafe-hours {
+    @include span-columns(6);
+  }
+
+  .cafe-hours {
+    text-align: right;
+  }
+}
+
+// -------------------------------------
+//   Site Header
+// -------------------------------------
+
+.site-header {
+  margin-bottom: calc-em(35px);
+
+  .container {
+    @extend %group;
+  }
+
+  h1 {
+    @include span-columns(4);
+
+    a {
+      display: block;
+      text-indent: -9999px;
+      background: image-url('img-logo.svg') no-repeat top left;
+      background-size: 220px 110px;
+      height: calc-em(110px, 60px);
+    }
+  }
+
+  .nav-list {
+    @include span-columns(8);
+    @include display(flex);
+    @include justify-content(space-around);
+    margin-top: calc-em(40px);
+    text-align: right;
+
+    a {
+      font-family: $font-family-headings;
+      text-transform: uppercase;
+      font-size: calc-em(18px);
+      color: $gray-dark;
+      display: block;
+      text-align: right;
+      padding: calc-em(10px, 18px);
+      line-height: calc-em(50px, 18px);
+    }
+  }// .nav-list
+}// .site-header
+
+// -------------------------------------
+//   Site Footer
+// -------------------------------------
+
+.site-footer {
+  background: $gray-darker;
+  font-size: calc-em(14px);
+  color: $gray-lighter;
+
+  a {
+    color: $gray-lighter;
+  }
+
+  h4 {
+    color: $white;
+    font-size: calc-em(20px, 14px);
+  }
+
+  .container {
+    @extend %group;
+  }
+
+  .footer-nav {
+    background: $gray-darkest;
+    padding: calc-em(15px, 14px) 0 calc-em(30px, 14px);
+  }
+
+  .nav-group {
+    @include span-columns(3);
+
+    li {
+      display: block;
+    }
+  }// .nav-group
+
+  .footer-meta {
+    padding: calc-em(15px, 14px) 0 calc-em(60px, 14px);
+
+    .contact-emails,
+    .social-links {
+      @extend %zero-list;
+    }
+  }
+
+  .footer-hours,
+  .footer-contact {
+    @include span-columns(4);
+  }
+
+  .footer-address,
+  .footer-social {
+    @include span-columns(4);
+    @include shift(3);
+  }
+
+  .footer-hours,
+  .footer-address {
+    margin-bottom: calc-em(25px, 14px);
+  }
+
+  .footer-hours {
+    .day {
+      line-height: calc-em(28px, 14px);
+    }
+  }
+
+  .footer-contact {
+    clear: both;
+  }
+}// .site-footer-

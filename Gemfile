@@ -6,6 +6,10 @@ gem "json", "~> 1.8.3"
 gem "bourbon"
 gem "neat"
 
+gem "less"
+
+gem "therubyracer"
+
 gem "middleman", "~> 4.1.10"
 
 gem "middleman-livereload", "~> 3.4.6"
