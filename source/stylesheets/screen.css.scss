@@ -23,8 +23,7 @@
 @import "libs/awesomplete";
 
 // ----- Bootstrap Misc. ----- //
-@import "libs/bootstrap_forms";
-@import "libs/bootstrap_input-groups";
+@import "libs/bootstrap";
 
 // ----- Bourbon ----- //
 @import "bourbon";
@@ -53,6 +52,7 @@
 // -------------------------------------
 
 @import "pages/home";
+@import "pages/beer_detail";
 
 // -------------------------------------
 //   Inbox
@@ -121,6 +121,64 @@ header {
 }
 
 // -------------------------------------
+//   Beer Info Table
+// -------------------------------------
+
+.beer-info-table {
+  text-align: left;
+  color: $gray-light;
+
+  th {
+    font-family: $font-family-headings;
+    text-transform: uppercase;
+  }
+
+  td {
+    font-size: calc-em(19px);
+  }
+
+}
+
+// -------------------------------------
+//   Beer Summary
+// -------------------------------------
+
+.beer-summary {
+
+  h4 a {
+    color: $gray-dark;
+  }
+
+
+  &.small {
+    @extend %group;
+
+    .beer-summary-image {
+      float: left;
+      width: 40%;
+      display: block;
+    }
+
+    h4,
+    .beer-info-table {
+      float: right;
+      width: 55%;
+
+      th {
+        font-size: calc-em(12px);
+      }
+
+      td {
+        font-size: calc-em(14px);
+      }
+    }
+  }
+
+
+}
+
+
+// -------------------------------------
 //   Site Header
 // -------------------------------------
 
@@ -143,6 +201,10 @@ header {
     }
   }
 
+  .site-nav {
+    @extend %group;
+  }
+
   .nav-list {
     @include span-columns(8);
     @include display(flex);
@@ -159,6 +221,18 @@ header {
       text-align: right;
       padding: calc-em(10px, 18px);
       line-height: calc-em(50px, 18px);
+    }
+
+    &.subnav {
+      margin-top: 0;
+      float: right;
+
+      a {
+        font-size: calc-em(16px);
+        color: $gray-light;
+        padding-top: 0;
+        margin-top: -20px;
+      }
     }
   }// .nav-list
 }// .site-header

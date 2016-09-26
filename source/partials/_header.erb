@@ -4,25 +4,29 @@
       <h1 class="logo"><a href="#">Madtree Brewing</a></h1>
 
       <ul class="nav-list">
-        <li><a href="#">Beers</a></li>
+        <li><a href="#">Beers</a>
+        </li>
         <li><a href="#">Store</a></li>
         <li><a href="#">Community</a></li>
         <li><a href="#">Events</a></li>
         <li><a href="#">Taproom</a></li>
         <li><a href="#">Blog</a></li>
       </ul> <!-- /nav-list -->
-    <% if current_page.data.sub_nav? %>
-      <ul class="subnav nav-list">
-        <li><a href="#">Happy Amber</a></li>
-        <li><a href="#">Lift</a></li>
-        <li><a href="#">PSA</a></li>
-        <li><a href="#">Psychopathy</a></li>
-        <li><a href="#">Seasonal</a></li>
-        <li><a href="#">Limited Draft</a></li>
-        <li><a href="#">Series</a></li>
-        <li><a href="#">Retired</a></li>
-      </ul>
-    <% end %>
+    </nav>
+    <nav class="site-nav">
+      <% if current_page.data.sub_nav? %>
+        <ul class="subnav nav-list">
+          <li><a href="#">Happy Amber</a></li>
+          <li><a href="#">Lift</a></li>
+          <li><a href="#">PSA</a></li>
+          <li><a href="#">Psychopathy</a></li>
+          <li><a href="#">Seasonal</a></li>
+          <li><a href="#">Limited Draft</a></li>
+          <li><a href="#">Series</a></li>
+          <li><a href="#">Retired</a></li>
+        </ul>
+      <% end %>
+    </nav>
     <% if current_page.data.store? %>
       <form class="search">
         <div class="form-group">

@@ -10,74 +10,80 @@ sub_nav: true
   <meta name="description" content='Bringing canned craft beer to Cincinnati.' />
 <% end %>
 
+<% content_for :page_classes do %>beer-detail<% end %>
 
-<h2>Psychopathy</h2>
 
 <section class="beer-info">
-  <div class="beer-description">
-    <p>Sed sed tincidunt ex. Curabitur a ex at dui finibus euismod. Vivamus nec vehicula arcu, a vestibulum nisi. Donec ut neque mi. Curabitur consectetur mi turpis, sed rhoncus lectus mollis eu. Aliquam fermentum dui eget nulla consequat porta. Pellentesque ac tincidunt mi.</p>
-  </div>
-
   <div class="beer-image">
     <%= image_tag "http://placehold.it/305x380" %>
   </div>
 
-  <table class="beer-info-table">
-    <tr>
-      <th colspan="2">Availability</th>
-    </tr>
-    <tr>
-      <td colspan="2">Year-round, 6-pack cans, Taproom</td>
-    </tr>
-    <tr>
-      <th>IBUs</th>
-      <th>ABV</th>
-    </tr>
-    <tr>
-      <td>70</td>
-      <td>6.9%</td>
-    </tr>
-    <tr>
-      <th colspan="2">Hops</th>
-    </tr>
-    <tr>
-      <td colspan="2">Cascade, Chinook, Centennial</td>
-    </tr>
-    <tr>
-      <th colspan="2">Malts</th>
-    </tr>
-    <tr>
-      <td colspan="2">2-Row, Vienna, Caramel 40L, Carapils</td>
-    </tr>
-  </table>
+  <div class="beer-description">
+    <h2>Psychopathy</h2>
 
-  <%= link_to "Download the Recipe", "#", class: "btn btn-primary" %>
+    <p>Sed sed tincidunt ex. Curabitur a ex at dui finibus euismod. Vivamus nec vehicula arcu, a vestibulum nisi. Donec ut neque mi. Curabitur consectetur mi turpis, sed rhoncus lectus mollis eu. Aliquam fermentum dui eget nulla consequat porta. Pellentesque ac tincidunt mi.</p>
+    <table cellpadding="0" cellspacing="0" class="beer-info-table">
+      <tr>
+        <th colspan="2">Availability</th>
+      </tr>
+      <tr>
+        <td colspan="2">Year-round, 6-pack cans, Taproom</td>
+      </tr>
+      <tr>
+        <th>IBUs</th>
+        <th>ABV</th>
+      </tr>
+      <tr>
+        <td>70</td>
+        <td>6.9%</td>
+      </tr>
+      <tr>
+        <th colspan="2">Hops</th>
+      </tr>
+      <tr>
+        <td colspan="2">Cascade, Chinook, Centennial</td>
+      </tr>
+      <tr>
+        <th colspan="2">Malts</th>
+      </tr>
+      <tr>
+        <td colspan="2">2-Row, Vienna, Caramel 40L, Carapils</td>
+      </tr>
+    </table>
+
+    <%= link_to "Download the Recipe", "#", class: "btn btn-primary" %>
+  </div>
+
 </section> <!-- /beer-info -->
 
 <section class="related-merch">
   <h3>Related Merch</h3>
   <div class="merch">
-    <%= link_to image_tag("http://placehold.it/230x215"), "#" %>
+    <%= link_to image_tag("http://placehold.it/285x230"), "#" %>
     <%= link_to "Buy a T-shirt", "#" %>
   </div>
   <div class="merch">
-    <%= link_to image_tag("http://placehold.it/230x215"), "#" %>
+    <%= link_to image_tag("http://placehold.it/285x230"), "#" %>
     <%= link_to "Buy a Poster", "#" %>
   </div>
 </section> <!-- /related-merch -->
 
 <section class="related-beers">
-  <h3>Related Beers</h3>
-  <div class="beer-summary small">
-    <%= link_to image_tag("http://placehold.it/65x90"), "#", class: "beer-summary-image" %>
-    <h4><a href="#">Galaxy High</a></h4>
-    <table class="beer-info-table">
-      <tr>
-        <th>IBUs</th> <th>ABV</th>
-      </tr>
-      <tr>
-        <td>70</td> <td>6.9%</td>
-      </tr>
-    </table>
-  </div><!-- /beer-summary -->
+  <h4>Related Beers</h4>
+  <div>
+    <% 8.times do %>
+      <div class="beer-summary small">
+        <%= link_to image_tag("http://placehold.it/65x90"), "#", class: "beer-summary-image" %>
+        <h4><a href="#">Galaxy High</a></h4>
+        <table cellpadding="0" cellspacing="0" class="beer-info-table small">
+          <tr>
+            <th>IBUs</th> <th>ABV</th>
+          </tr>
+          <tr>
+            <td>70</td> <td>6.9%</td>
+          </tr>
+        </table>
+      </div><!-- /beer-summary -->
+    <% end %>
+  </div>
 </section> <!-- /related-beers -->
