@@ -29,7 +29,7 @@ sub_nav: true
     <div class="partner-text">
       <h3>Partner Name</h3>
       <p>Curabitur ornare lacus vitae purus interdum congue. In eleifend massa ut lacus malesuada, nec sollicitudin nisi lacinia. Fusce erat quam, euismod nec lobortis molestie, sodales vel augue. Nullam bibendum dapibus lectus. Pellentesque interdum, dui et eleifend egestas, libero nisi ultrices felis, nec ullamcorper justo diam molestie lectus. Nam vitae nisl ut quam dignissim facilisis id sed eros.</p>
-      <%= link_to "More about Partner Name", "#", class: "btn btn-primary btn-small" %>
+      <%= link_to "More about Partner Name", "#", class: "btn btn-primary" %>
     </div>
   </div> <!-- /partner -->
   <% end %>
@@ -43,40 +43,42 @@ sub_nav: true
   <div class="current-month-partner">
     <div class="partner">
       <div class="partner-image">
-        <%= link_to image_tag("http://placehold.it/320x320"), "#" %>
+        <%= link_to image_tag("http://placehold.it/385x385"), "#" %>
       </div>
       <div class="partner-text">
         <h6>July's Partner</h6>
         <h3>Partner Name</h3>
         <p>Curabitur ornare lacus vitae purus interdum congue. In eleifend massa ut lacus malesuada, nec sollicitudin nisi lacinia. Fusce erat quam, euismod nec lobortis molestie, sodales vel augue. Nullam bibendum dapibus lectus. Pellentesque interdum, dui et eleifend egestas, libero nisi ultrices felis, nec ullamcorper justo diam molestie lectus. Nam vitae nisl ut quam dignissim facilisis id sed eros.</p>
-        <%= link_to "More about Partner Name", "#", class: "btn btn-primary btn-small" %>
+        <%= link_to "More about Partner Name", "#", class: "btn btn-primary" %>
       </div>
     </div> <!-- /partner -->
   </div>
 
   <div class="on-deck-partner">
-    <h4>On Deck</h4>
+    <h3>On Deck</h3>
     <div class="partner">
       <div class="partner-image">
         <%= link_to image_tag("http://placehold.it/320x320"), "#" %>
       </div>
       <div class="partner-text">
-        <h3>Partner Name</h3>
+        <h4>Partner Name</h4>
       </div>
     </div> <!-- /partner -->
   </div> <!-- /on-deck-partner -->
 
   <div class="previous-partners">
-    <h4>Previous Partners</h4>
-    <%= 10.times do %>
-    <div class="partner">
-      <div class="partner-image">
-        <%= link_to image_tag("http://placehold.it/320x320"), "#" %>
-      </div>
-      <div class="partner-text">
-        <h3>Partner Name</h3>
-      </div>
-    </div> <!-- /partner -->
-    <% end %>
+    <h3>Previous Partners</h3>
+    <div class="partners">
+      <% 10.times do %>
+        <div class="partner">
+          <div class="partner-image">
+            <%= link_to image_tag("http://placehold.it/320x320"), "#" %>
+          </div>
+          <div class="partner-text">
+            <h4>Partner Name</h4>
+          </div>
+        </div> <!-- /partner -->
+      <% end %>
+    </div>
   </div> <!-- /previous-partners -->
 </section> <!-- /monthly-partners -->

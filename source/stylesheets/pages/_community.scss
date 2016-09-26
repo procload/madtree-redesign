@@ -1,0 +1,70 @@
+body.community {
+
+  .core-partners {
+    @include display(flex);
+    @include justify-content(space-between);
+    @include flex-wrap(wrap);
+    text-align: center;
+
+    .partner {
+      width: 33.333333%;
+      padding: 0 2%;
+      margin-bottom: calc-em(48px);
+
+      h3 {
+        font-size: calc-em(28px);
+      }
+
+      p {
+        font-size: calc-em(18px);
+      }
+    }
+  }
+
+  .current-month-partner,
+  .on-deck-partner,
+  .previous-partners {
+    margin-bottom: calc-em(32px);
+  }
+
+  .current-month-partner {
+    .partner {
+      @extend %group;
+
+      .partner-image {
+        @include span-columns(4);
+      }
+
+      .partner-text {
+        @include span-columns(8);
+      }
+
+      h3 {
+        font-size: calc-em(28px);
+      }
+
+      p {
+        font-size: calc-em(18px);
+      }
+    }
+  }
+  .on-deck-partner,
+  .previous-partners {
+
+    .partners {
+      @include display(flex);
+      @include justify-content(space-between);
+    }
+
+    .partner {
+      text-align: center;
+      width: 8%;
+    }
+  }
+
+  .on-deck-partner {
+    .partner {
+      width: 16%;
+    }
+  }
+}

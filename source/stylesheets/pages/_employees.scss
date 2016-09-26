@@ -1,0 +1,51 @@
+body.employees {
+
+  .people-nav {
+    margin-bottom: calc-em(32px);
+  }
+
+  .people-categories {
+    @extend %zero-list;
+    @include display(flex);
+    @include justify-content(space-around);
+    font-family: $font-family-headings;
+    text-transform: uppercase;
+    font-size: calc-em(24px);
+  }
+
+  .people-section {
+
+    h3 {
+      font-size: calc-em(32px);
+      border-bottom: 2px solid $gray-lighter;
+      margin-bottom: calc-em(24px, 32px);
+      padding-bottom: calc-em(12px, 32px);
+    }
+  }// .people-section
+
+  .person {
+    @extend %group;
+    margin-bottom: calc-em(24px);
+
+    .person-image {
+      @include span-columns(4);
+    }
+
+    .person-text {
+      @include span-columns(8);
+
+      h4 {
+        font-size: calc-em(28px);
+      }
+
+      h5 {
+        font-size: calc-em(18px);
+        margin-bottom: calc-em(24px, 18px);
+      }
+
+      p {
+        font-size: calc-em(18px);
+      }
+    }
+  }// .person
+}// .employees

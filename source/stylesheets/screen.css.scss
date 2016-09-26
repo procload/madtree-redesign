@@ -54,6 +54,8 @@
 @import "pages/beer_category";
 @import "pages/beer_detail";
 @import "pages/beer_index";
+@import "pages/community";
+@import "pages/employees";
 @import "pages/home";
 
 // -------------------------------------
@@ -180,6 +182,25 @@ header {
 
 }
 
+// -------------------------------------
+//   Page Hero
+// -------------------------------------
+
+.page-hero {
+  text-align: center;
+  margin-bottom: calc-em(48px);
+
+  h2 {
+    font-size: calc-em(48px);
+  }
+
+  p {
+    font-weight: light;
+    font-size: calc-em(21px);
+    padding: 0 5%;
+    color: $gray;
+  }
+}// .page-hero
 
 // -------------------------------------
 //   Site Header

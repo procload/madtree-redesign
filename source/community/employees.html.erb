@@ -10,6 +10,8 @@ sub_nav: true
   <meta name="description" content='Bringing canned craft beer to Cincinnati.' />
 <% end %>
 
+<% content_for :page_classes do %>employees<% end %>
+
 <nav class="people-nav">
   <ul class="people-categories">
     <li><a href="#brewing">Brewing</a></li>
@@ -26,7 +28,7 @@ sub_nav: true
   <% 5.times do %>
   <div class="person">
     <div class="person-image">
-      <%= image_tag "http://placehold.it/320x320" %>
+      <%= image_tag "http://placehold.it/385x385" %>
     </div>
     <div class="person-text">
       <h4>Employee Name</h4>
