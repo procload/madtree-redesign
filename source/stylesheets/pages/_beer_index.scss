@@ -9,8 +9,13 @@ body.beer-index {
     margin-bottom: calc-em(60px);
   }
 
+  .beer-preview h5 {
+    font-size: calc-em(16px);
+  }
+
   .core-beers,
-  .secondary-beers {
+  .secondary-beers,
+  .beer-category {
     margin-bottom: calc-em(60px);
     text-align: center;
 
@@ -26,6 +31,18 @@ body.beer-index {
     }
   }
 
+  .browse-beers {
+    h4 {
+      text-align: left;
+      color: $gray-light;
+      margin-bottom: calc-em(8px);
+    }
+
+    .beer-preview {
+      width: 10%;
+    }
+
+  }// .browse-beers
 
 
 }// .beer-index

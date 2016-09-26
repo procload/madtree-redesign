@@ -57,23 +57,27 @@ sub_nav: true
 
     <div class="beer-category">
       <h4>Limited</h4>
-      <% 8.times do %>
-        <div class="beer-preview">
-          <%= link_to image_tag("http://placehold.it/110x150"), "#" %>
-          <h5><%= link_to "Happy Amber", "#" %></h5>
-        </div>
-      <% end %>
+      <div class="beers">
+        <% 8.times do %>
+          <div class="beer-preview">
+            <%= link_to image_tag("http://placehold.it/110x150"), "#" %>
+            <h5><%= link_to "Happy Amber", "#" %></h5>
+          </div>
+        <% end %>
+      </div>
       <%= link_to "See All Limited", "#", class: "btn btn-primary" %>
     </div> <!-- /beer-category -->
 
     <div class="beer-category">
       <h4>Series</h4>
-      <% 8.times do %>
-        <div class="beer-preview">
-          <%= link_to image_tag("http://placehold.it/110x150"), "#" %>
-          <h5><%= link_to "Happy Amber", "#" %></h5>
-        </div>
-      <% end %>
+      <div class="beers">
+        <% 8.times do %>
+          <div class="beer-preview">
+            <%= link_to image_tag("http://placehold.it/110x150"), "#" %>
+            <h5><%= link_to "Happy Amber", "#" %></h5>
+          </div>
+        <% end %>
+      </div>
       <%= link_to "See All Limited", "#", class: "btn btn-primary" %>
     </div> <!-- /beer-category -->
   </section> <!-- /browse-beers -->
