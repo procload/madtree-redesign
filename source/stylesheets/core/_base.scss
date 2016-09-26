@@ -59,6 +59,26 @@ h2 {
 
 h3 {
   font-size: calc-em(20px);
+
+  &.with-border {
+    margin-bottom: calc-em(10px, 20px);
+    color: $gray-light;
+    display: table;
+    white-space: nowrap;
+
+    &:before,
+    &:after {
+      border-top: 2px solid $gray-lightest;
+      content: '';
+      display: table-cell;
+      position: relative;
+      top: 0.5em;
+      width: 45%;
+    }
+
+    &:before { right: 1.5%; }
+    &:after { left: 1.5%; }
+  }// &.with-border
 }
 
 h4 {

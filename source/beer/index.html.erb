@@ -10,61 +10,71 @@ sub_nav: true
   <meta name="description" content='Bringing canned craft beer to Cincinnati.' />
 <% end %>
 
+<% content_for :page_classes do %>beer-index<% end %>
+
 <section class="page-marketing">
   <% 3.times do %>
-  <div class="marketing-pane">
-    <h3>PSA Now in Kegs</h3>
-    <p>Vestibulum a augue cursus, finibus Quisque fermentum varius rutrum sed.</p>
-  </div>
+  <a href="#" class="marketing-pane" style="background-image: url('http://unsplash.it/800x200');">
+    <div class="marketing-message">
+      <h3>PSA Now in Kegs</h3>
+      <p>Vestibulum a augue cursus, finibus Quisque fermentum varius rutrum sed.</p>
+    </div>
+  </a>
   <% end %>
 </section> <!-- /page-marketing -->
 
-<section class="core-beers">
-  <h3>Our Front Runners</h3>
+<div class="container">
+  <section class="core-beers">
+    <h3 class="with-border">Our Front Runners</h3>
 
-  <% 7.times do %>
-  <div class="beer-preview">
-    <%= link_to image_tag("http://placehold.it/180x220"), "#" %>
-    <h5><%= link_to "Happy Amber", "#" %></h5>
-  </div> <!-- beer-preview -->
-  <% end %>
-</section> <!--/core-beers -->
-
-<section class="secondary-beers">
-  <h3>What's in Season</h3>
-
-  <% 4.times do %>
-  <div class="beer-preview">
-    <%= link_to image_tag("http://placehold.it/180x220"), "#" %>
-    <h5><%= link_to "Happy Amber", "#" %></h5>
-  </div> <!-- beer-preview -->
-  <% end %>
-
-  <%= link_to "See All Seasonal", "#", class: "btn btn-primary" %>
-</section> <!-- seconadry-beers -->
-
-<section class="browse-beers">
-  <h3>Browse Our Beer</h3>
-
-  <div class="beer-category">
-    <h4>Limited</h4>
-    <% 8.times do %>
-    <div class="beer-preview">
-      <%= link_to image_tag("http://placehold.it/110x150"), "#" %>
-      <h5><%= link_to "Happy Amber", "#" %></h5>
+    <div class="beers">
+      <% 7.times do %>
+        <div class="beer-preview">
+          <%= link_to image_tag("http://placehold.it/180x220"), "#" %>
+          <h5><%= link_to "Happy Amber", "#" %></h5>
+        </div> <!-- beer-preview -->
+      <% end %>
     </div>
-    <% end %>
-    <%= link_to "See All Limited", "#", class: "btn btn-primary" %>
-  </div> <!-- /beer-category -->
+  </section> <!--/core-beers -->
 
-  <div class="beer-category">
-    <h4>Series</h4>
-    <% 8.times do %>
-    <div class="beer-preview">
-      <%= link_to image_tag("http://placehold.it/110x150"), "#" %>
-      <h5><%= link_to "Happy Amber", "#" %></h5>
+  <section class="secondary-beers">
+    <h3 class="with-border">What's in Season</h3>
+
+    <div class="beers">
+      <% 4.times do %>
+        <div class="beer-preview">
+          <%= link_to image_tag("http://placehold.it/180x220"), "#" %>
+          <h5><%= link_to "Happy Amber", "#" %></h5>
+        </div> <!-- beer-preview -->
+      <% end %>
     </div>
-    <% end %>
-    <%= link_to "See All Limited", "#", class: "btn btn-primary" %>
-  </div> <!-- /beer-category -->
-</section> <!-- /browse-beers -->
+
+    <%= link_to "See All Seasonal", "#", class: "btn btn-primary" %>
+  </section> <!-- seconadry-beers -->
+
+  <section class="browse-beers">
+    <h3 class="with-border">Browse Our Beer</h3>
+
+    <div class="beer-category">
+      <h4>Limited</h4>
+      <% 8.times do %>
+        <div class="beer-preview">
+          <%= link_to image_tag("http://placehold.it/110x150"), "#" %>
+          <h5><%= link_to "Happy Amber", "#" %></h5>
+        </div>
+      <% end %>
+      <%= link_to "See All Limited", "#", class: "btn btn-primary" %>
+    </div> <!-- /beer-category -->
+
+    <div class="beer-category">
+      <h4>Series</h4>
+      <% 8.times do %>
+        <div class="beer-preview">
+          <%= link_to image_tag("http://placehold.it/110x150"), "#" %>
+          <h5><%= link_to "Happy Amber", "#" %></h5>
+        </div>
+      <% end %>
+      <%= link_to "See All Limited", "#", class: "btn btn-primary" %>
+    </div> <!-- /beer-category -->
+  </section> <!-- /browse-beers -->
+</div>

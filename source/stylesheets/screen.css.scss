@@ -53,6 +53,7 @@
 
 @import "pages/home";
 @import "pages/beer_detail";
+@import "pages/beer_index";
 
 // -------------------------------------
 //   Inbox
@@ -182,6 +183,40 @@ header {
 //   Site Header
 // -------------------------------------
 
+.page-marketing {
+  @extend %group;
+  @include display(flex);
+
+  .marketing-pane {
+    display: block;
+    width: 33.3333333%;
+    background-size: 100%;
+    position:relative;
+    padding-top: calc-em(240px);
+  }
+
+  .marketing-message {
+    background: rgba(0,0,0,.7);
+    color: $white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: calc-em(15px);
+    border-top: 5px solid rgba(0,0,0,.8);
+    text-align: center;
+  }
+
+  h3 {
+    font-size: calc-em(26px);
+  }
+}
+
+
+// -------------------------------------
+//   Site Header
+// -------------------------------------
+
 .site-header {
   margin-bottom: calc-em(35px);
 
@@ -208,7 +243,8 @@ header {
   .nav-list {
     @include span-columns(8);
     @include display(flex);
-    @include justify-content(space-around);
+    @include justify-content(space-between);
+    @include flex-direction(row);
     margin-top: calc-em(40px);
     text-align: right;
 
