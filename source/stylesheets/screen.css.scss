@@ -51,9 +51,10 @@
 //   Pages
 // -------------------------------------
 
-@import "pages/home";
+@import "pages/beer_category";
 @import "pages/beer_detail";
 @import "pages/beer_index";
+@import "pages/home";
 
 // -------------------------------------
 //   Inbox
@@ -128,6 +129,7 @@ header {
 .beer-info-table {
   text-align: left;
   color: $gray-light;
+  width: 100%;
 
   th {
     font-family: $font-family-headings;
