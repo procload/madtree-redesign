@@ -80,20 +80,4 @@ body.home {
   }
 
 
-  .on-tap-beer {
-    width: 20%;
-    margin-bottom: calc-em(30px);
-
-    p {
-      margin-bottom: 0;
-    }
-
-    .style,
-    .abv,
-    .ibu {
-      font-size: calc-em(12px);
-      line-height: calc-em(12px, 12px);
-      color: $gray;
-    }
-  }
 }

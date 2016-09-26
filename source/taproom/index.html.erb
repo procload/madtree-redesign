@@ -10,6 +10,7 @@ sub_nav: true
   <meta name="description" content='Bringing canned craft beer to Cincinnati.' />
 <% end %>
 
+<% content_for :page_classes do %>taproom<% end %>
 
 <section class="page-hero">
   <%= image_tag "http://placehold.it/1600x300", class: "hero-image" %>
@@ -30,17 +31,20 @@ sub_nav: true
     <h4>Phone</h4>
     <p itemprop="telephone"><a href="tel:+5555555555">555-555-5555</a></p>
   </div> <!-- /taproom-phone -->
+
+  <section class="taproom-hours">
+    <h4>Taproom Hours</h4>
+    <div class="days">
+      <% 6.times do %>
+        <div class="day">
+          <h4>Tuesday</h4>
+          <span class="hours">4pm—11pm</span>
+        </div>
+      <% end %>
+    </div>
+  </section> <!-- /taproom-hours -->
 </section> <!-- page-hero -->
 
-<section class="taproom-hours">
-  <h4>Taproom Hours</h4>
-  <div class="day">
-    <% 6.times do %>
-      <h4>Tuesday</h4>
-      <span class="hours">4pm—11pm</span>
-    <% end %>
-  </div>
-</section> <!-- /taproom-hours -->
 
 <section class="private-events">
   <header class="section-header">
@@ -72,30 +76,32 @@ sub_nav: true
     <p>Morbi porttitor consequat iaculis. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
   </header>
 
-  <% 20.times do %>
-  <div class="on-tap-beer">
-    <a data-container="body"
-      data-toggle="popover"
-      data-placement="top"
-      data-html="true"
-      title="Beer Prices"
-      data-content='
-        <strong class="size">Pint <span class="price">$6</span></strong>
-        <strong class="size">Snifter <span class="price">$6</span></strong>
-        <strong class="size">Taster <span class="price">$6</span></strong>
-        <strong class="size">64oz Growler <span class="price">$6</span></strong>
-        <strong class="size">40oz Growler <span class="price">$6</span></strong>
-        <strong class="size">32oz Growler <span class="price">$6</span></strong>
-      '>
-      <h4>Sol Drifter</h4>
-      <p class="style">Blonde Ale with Strawberries</p>
-      <span class="abv">
-        <strong>ABV</strong>: 4.6%
-      </span>
-      <span class"ibu">
-        <strong>IBUS</strong>: 34
-      </span>
-    </a>
-  </div> <!-- /on-tap-beer -->
-  <% end %>
+  <div class="beers">
+    <% 20.times do %>
+      <div class="on-tap-beer">
+        <a data-container="body"
+          data-toggle="popover"
+          data-placement="top"
+          data-html="true"
+          title="Beer Prices"
+          data-content='
+          <strong class="size">Pint <span class="price">$6</span></strong>
+          <strong class="size">Snifter <span class="price">$6</span></strong>
+          <strong class="size">Taster <span class="price">$6</span></strong>
+          <strong class="size">64oz Growler <span class="price">$6</span></strong>
+          <strong class="size">40oz Growler <span class="price">$6</span></strong>
+          <strong class="size">32oz Growler <span class="price">$6</span></strong>
+          '>
+          <h4>Sol Drifter</h4>
+          <p class="style">Blonde Ale with Strawberries</p>
+          <span class="abv">
+            <strong>ABV</strong>: 4.6%
+          </span>
+          <span class="ibu">
+            <strong>IBUS</strong>: 34
+          </span>
+        </a>
+      </div> <!-- /on-tap-beer -->
+    <% end %>
+  </div>
 </section> <!-- /on-tap -->

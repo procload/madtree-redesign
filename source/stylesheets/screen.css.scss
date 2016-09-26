@@ -57,6 +57,7 @@
 @import "pages/community";
 @import "pages/employees";
 @import "pages/home";
+@import "pages/taproom";
 
 // -------------------------------------
 //   Inbox
@@ -195,12 +196,33 @@ header {
   }
 
   p {
-    font-weight: light;
+    font-weight: 100;
     font-size: calc-em(21px);
     padding: 0 5%;
     color: $gray;
   }
 }// .page-hero
+
+
+// -------------------------------------
+//   On Tap Beer
+// -------------------------------------
+.on-tap-beer {
+  width: 20%;
+  margin-bottom: calc-em(30px);
+
+  p {
+    margin-bottom: 0;
+  }
+
+  .style,
+  .abv,
+  .ibu {
+    font-size: calc-em(12px);
+    line-height: calc-em(12px, 12px);
+    color: $gray;
+  }
+}
 
 // -------------------------------------
 //   Site Header

@@ -1,0 +1,74 @@
+body.taproom {
+
+  .section-header {
+    text-align: center;
+    margin-bottom: calc-em(32px);
+
+    h3 {
+      font-size: calc-em(42px);
+    }
+
+    p {
+      font-size: calc-em(21px);
+      font-weight: 100;
+    }
+  }
+
+  .taproom-phone,
+  .taproom-address {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 calc-em(20px) calc-em(32px);
+
+    p {
+      font-size: calc-em(16px);
+      font-weight: 100;
+    }
+  }
+
+  .taproom-hours {
+    text-align: center;
+
+    .days {
+      @include display(flex);
+      @include justify-content(space-around);
+
+      .day {
+        width: 16.66667%;
+      }
+    }
+  }
+
+  .private-events,
+  .food {
+    text-align: center;
+    @include span-columns(6);
+    @include pad(0 default);
+
+    .section-header {
+      margin-bottom: calc-em(32px);
+
+      p {
+        font-size: calc-em(18px);
+      }
+    }
+  }
+
+  .food {
+    @include omega();
+  }
+
+  .on-tap {
+    .beers {
+      @include display(flex);
+      @include justify-content(space-between);
+      @include flex-wrap(wrap);
+      text-align: center;
+
+      a {
+        color: $gray-dark;
+      }
+
+    }
+  }
+}
