@@ -42,7 +42,7 @@
 //   Modules
 // -------------------------------------
 
-@import "modules/example";
+@import "modules/button";
 
 // -------------------------------------
 //   Pages
@@ -64,13 +64,6 @@
 
 header {
   padding-top: 20px;
-}
-
-.ctas {
-}
-
-.cta {
-  @include span-columns(4);
 }
 
 // -------------------------------------

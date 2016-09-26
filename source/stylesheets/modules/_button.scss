@@ -10,6 +10,9 @@
 .btn {
   border: none;
   background: $btn-default-color;
+  color: $white;
+  text-transform: uppercase;
+  font-family: $font-family-headings;
   display: inline-block;
   margin-bottom: 0; // For input.btn
   font-weight: bold;
@@ -20,17 +23,21 @@
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
   border: 1px solid transparent;
   white-space: nowrap;
-  padding: calc-em(8px, 15px) calc-em(20px, 15px);
-  font-size: calc-em(15px);
-  line-height: calc-em(30px, 15px);
+  padding: calc-em(3px, 18px) calc-em(18px) 0;
+  font-size: calc-em(18px);
+  line-height: calc-em(30px, 18px);
   border-radius: 1px;
+
+  &:visited {
+    color: $white;
+  }
 
   &,
   &:active,
   &.active {
     &:focus,
     &.focus {
-      @include tab-focus;
+      //@include tab-focus;
     }
   }
 
@@ -50,9 +57,8 @@
   &.disabled,
   &[disabled],
   fieldset[disabled] & {
-    cursor: $cursor-disabled;
-    @include opacity(.65);
-    @include box-shadow(none);
+    opacity: .65;
+    box-shadow: none;
   }
 }
 
@@ -62,12 +68,12 @@
 
 // ----- Primary Button ----- //
 .btn-primary {
-
+  color: $white;
 }
 
 // ----- Small Button ----- //
 .btn-small {
   font-size: calc-em(12px);
-  padding: calc-em(6px, 12px) calc-em(16, 12px);
+  padding: calc-em(6px, 12px) calc-em(16px, 12px);
   line-height: calc-em(24px, 12px);
 }

@@ -9,15 +9,18 @@ description: ""
   <meta name="description" content='Bringing canned craft beer to Cincinnati.' />
 <% end %>
 
+<% content_for :page_classes do %>home<% end %>
+
 <section class="slideshow">
-  <% 3.times do %>
   <div class="slide">
-    <%= image_tag "http://placehold.it/1600x500" %>
+    <%= image_tag "http://unsplash.it/1600/650" %>
     <div class="caption">
-      Nullam id libero felis fusce sed sollicitudin sodales nibh, ullamcorper.
+      <h2>Update Text Goes Here</h2>
+      <p>
+        Nullam id libero felis fusce sed sollicitudin sodales nibh, ullamcorper.
+      </p>
     </div>
   </div> <!-- /slide -->
-  <% end %>
 </section> <!-- /slideshow -->
 
 

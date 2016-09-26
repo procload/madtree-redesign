@@ -1,2 +1,99 @@
 body.home {
+
+// -------------------------------------
+//   Slideshow
+// -------------------------------------
+  .slideshow {
+    margin-bottom: calc-em(25px);
+
+  }
+
+  .slide {
+    position: relative;
+
+    img {
+      display: block;
+    }
+  }
+
+  .caption {
+    background: rgba(0,0,0,.7);
+    color: $white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: calc-em(15px) 0;
+    border-top: 5px solid rgba(0,0,0,.8);
+    text-align: center;
+
+    h2 {
+      color: $white;
+      font-size: calc-em(29px);
+    }
+
+    p {
+      font-size: 19px;
+    }
+  }// .caption
+
+// -------------------------------------
+//   CTAs
+// -------------------------------------
+  .ctas {
+    @extend %group;
+    margin-bottom: calc-em(40px);
+  }
+
+  .cta {
+    @include span-columns(4);
+    text-align: center;
+
+    h3 {
+      font-weight: normal;
+      margin-bottom: calc-em(8px, 20px);
+    }
+
+    p {
+      font-size: calc-em(14px);
+      font-weight: 100;
+    }
+  }
+
+// -------------------------------------
+//   OnTap
+// -------------------------------------
+
+  .on-tap {
+    text-align: center;
+    margin-bottom: calc-em(50px);
+
+    h3 {
+      margin-bottom: calc-em(20px, 20px);
+    }
+  }
+
+  .on-tap-slide {
+    @include display(flex);
+    @include justify-content(space-around);
+    @include flex-wrap(wrap);
+  }
+
+
+  .on-tap-beer {
+    width: 20%;
+    margin-bottom: calc-em(30px);
+
+    p {
+      margin-bottom: 0;
+    }
+
+    .style,
+    .abv,
+    .ibu {
+      font-size: calc-em(12px);
+      line-height: calc-em(12px, 12px);
+      color: $gray;
+    }
+  }
 }
