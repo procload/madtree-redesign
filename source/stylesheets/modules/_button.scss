@@ -26,7 +26,7 @@
   padding: calc-em(3px, 18px) calc-em(18px) 0;
   font-size: calc-em(18px);
   line-height: calc-em(30px, 18px);
-  border-radius: 1px;
+  border-radius: 2px;
 
   &:visited {
     color: $white;
@@ -73,7 +73,7 @@
 
 // ----- Small Button ----- //
 .btn-small {
-  font-size: calc-em(12px);
-  padding: calc-em(6px, 12px) calc-em(16px, 12px);
-  line-height: calc-em(24px, 12px);
+  font-size: calc-em(14px);
+  padding: calc-em(4px, 14px) calc-em(20px, 14px) calc-em(2px, 14px);
+  line-height: calc-em(18px, 14px);
 }

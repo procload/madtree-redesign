@@ -10,12 +10,15 @@ sub_nav: true
   <meta name="description" content='Bringing canned craft beer to Cincinnati.' />
 <% end %>
 
+<% content_for :page_classes do %>tours<% end %>
+
 <section class="page-hero alt">
   <div class="page-hero-text">
     <h2>Tours & Private Events</h2>
-    <p>Interested in booking a taproom event? Or looking for sponsorship or charitable dontation? Email info@madtreebrewing.com for more information.</p>
+    <p>Etiam varius purus quis ligula interdum, porta mollis dolor venenatis. Vivamus eleifend libero id mauris iaculis porta. Sed rutrum enim ut tellus vestibulum faucibus.</p>
+    <p>Etiam varius purus quis ligula interdum, porta mollis dolor venenatis. Vivamus eleifend libero id mauris iaculis porta. Sed rutrum enim ut tellus vestibulum faucibus.</p>
   </div>
-  <%= image_tag "http://placehold.it/430x240", class: "hero-image" %>
+  <%= image_tag "http://unsplash.it/430/240", class: "hero-image" %>
 </section> <!-- /page-hero -->
 
 <section class="tours">
@@ -24,7 +27,7 @@ sub_nav: true
 
   <div class="taproom-photos">
     <% 8.times do %>
-      <%= link_to image_tag("http://placehold.it/100x100"), "#", class: "taproom-photo-thumb" %>
+      <%= link_to image_tag("http://unsplash.it/100/100"), "#", class: "taproom-photo-thumb" %>
     <% end %>
   </div> <!-- /taproom-photos -->
 </section>

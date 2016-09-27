@@ -11,6 +11,8 @@ body.taproom {
     p {
       font-size: calc-em(21px);
       font-weight: 100;
+      width: 80%;
+      margin: 0 auto;
     }
   }
 
@@ -19,9 +21,14 @@ body.taproom {
     display: inline-block;
     vertical-align: top;
     margin: 0 calc-em(20px) calc-em(32px);
+    min-width: calc-em(115px);
 
     p {
       font-size: calc-em(16px);
+      font-weight: 100;
+    }
+
+    .street {
       font-weight: 100;
     }
   }
@@ -44,12 +51,18 @@ body.taproom {
     text-align: center;
     @include span-columns(6);
     @include pad(0 default);
+    margin-bottom: calc-em(64px);
 
     .section-header {
       margin-bottom: calc-em(32px);
 
+      h3 {
+        font-size: calc-em(32px);
+      }
+
       p {
         font-size: calc-em(18px);
+        width: 100%;
       }
     }
   }
@@ -58,7 +71,15 @@ body.taproom {
     @include omega();
   }
 
+  .cafe-hours {
+    margin-bottom: calc-em(24px);
+  }
+
   .on-tap {
+    h3 {
+      font-size: calc-em(32px);
+    }
+
     .beers {
       @include display(flex);
       @include justify-content(space-between);
@@ -66,9 +87,9 @@ body.taproom {
       text-align: center;
 
       a {
+        display: block;
         color: $gray-dark;
       }
-
     }
   }
 }

@@ -1,0 +1,42 @@
+body.tours {
+  .page-hero {
+
+    &.alt {
+      @extend %group;
+      text-align: left;
+
+      p {
+        padding: 0;
+      }
+
+      .page-hero-text {
+        @include span-columns(7);
+      }
+
+      .hero-image {
+        @include span-columns(5);
+      }
+    }
+  }// .page-hero
+
+  .tours {
+    @include span-columns(7);
+
+    .taproom-photos {
+      @include display(flex);
+      @include justify-content(space-between);
+
+    }
+
+    .taproom-photo-thumb {
+      display: block;
+      width: 10%;
+    }
+  }
+
+  .private-events {
+    @include span-columns(5);
+    text-align: left;
+    padding: 0;
+  }
+}

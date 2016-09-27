@@ -1,0 +1,33 @@
+body.events {
+
+  .filters {
+    @include display(flex);
+    margin-bottom: calc-em(32px);
+
+    .venue-filter {
+      margin-right: calc-em(32px);
+    }
+
+    .location-filter {
+
+    }
+  }
+
+  .event {
+    @include span-columns(6);
+    @include omega(2n);
+    margin-bottom: calc-em(32px);
+
+    h3 {
+      font-size: calc-em(32px);
+    }
+
+    h6 {
+      color: $gray-light;
+    }
+
+    p {
+      font-size: calc-em(18px);
+    }
+  }
+}
