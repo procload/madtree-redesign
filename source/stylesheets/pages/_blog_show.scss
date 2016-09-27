@@ -1,0 +1,17 @@
+body.blog-show {
+
+  .main-content {
+    @include pad(0 ($column * 2));
+  }
+
+
+  .post-header {
+    h3 {
+      font-size: calc-em(42px);
+    }
+  }
+
+  p {
+    font-size: calc-em(18px);
+  }
+}

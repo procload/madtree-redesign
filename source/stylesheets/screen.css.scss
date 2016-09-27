@@ -54,6 +54,8 @@
 @import "pages/beer_category";
 @import "pages/beer_detail";
 @import "pages/beer_index";
+@import "pages/blog_index";
+@import "pages/blog_show";
 @import "pages/community";
 @import "pages/employees";
 @import "pages/events";
@@ -71,10 +73,6 @@
 
 .container {
   @include outer-container;
-}
-
-header {
-  padding-top: 20px;
 }
 
 // -------------------------------------
@@ -231,10 +229,11 @@ header {
 }
 
 // -------------------------------------
-//   Filter
+//   Filter/Tag
 // -------------------------------------
 
-.filter {
+.filter,
+.tag {
   display: inline-block;
   border-radius: 4px;
   background: $gray-lightest;
@@ -300,7 +299,8 @@ header {
 // -------------------------------------
 
 .site-header {
-  margin-bottom: calc-em(35px);
+  padding-top: calc-em(32px);
+  margin-bottom: calc-em(32px);
 
   .container {
     @extend %group;

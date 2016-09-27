@@ -1,0 +1,32 @@
+body.blog-index {
+  .blog-posts {
+    @include span-columns(7);
+  }
+
+  .blog-meta {
+    @include span-columns(4);
+    @include shift(1);
+  }
+
+  .post {
+    margin-bottom: calc-em(24px);
+    padding-bottom: calc-em(24px);
+    border-bottom: 1px solid $gray-lighter;
+  }
+
+  .post-body {
+    margin-bottom: calc-em(16px);
+  }
+
+  h3 {
+    font-size: calc-em(32px);
+
+    a {
+      color: $gray-dark;
+    }
+  }
+
+  h6 {
+    color: $gray-light;
+  }
+}

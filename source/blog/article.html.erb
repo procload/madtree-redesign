@@ -9,6 +9,8 @@ description: ""
   <meta name="description" content='Bringing canned craft beer to Cincinnati.' />
 <% end %>
 
+<% content_for :page_classes do %>blog-show<% end %>
+
 <section class="blog-posts">
   <article class="post">
     <header class="post-header">
@@ -29,7 +31,6 @@ description: ""
       </blockquote>
       <p>Curabitur ornare lacus vitae purus interdum congue. In eleifend massa ut lacus malesuada, nec sollicitudin nisi lacinia. Fusce erat quam, euismod nec lobortis molestie, sodales vel augue. Nullam bibendum dapibus lectus.</p>
     </div> <!-- /post-body -->
-    <%= link_to "Continue Reading", "#", class: "btn btn-primary btn-small" %>
     <footer class="article-footer">
       Published in: <%= link_to "Brewing", "#" %>, <%= link_to "Brewing", "#" %>, <%= link_to "Brewing", "#" %>
     </footer> <!-- /article-footer -->

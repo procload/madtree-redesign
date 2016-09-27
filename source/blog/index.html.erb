@@ -9,12 +9,14 @@ description: ""
   <meta name="description" content='Bringing canned craft beer to Cincinnati.' />
 <% end %>
 
+<% content_for :page_classes do %>blog-index<% end %>
+
 <section class="blog-posts">
   <% 10.times do %>
   <article class="post">
     <header class="post-header">
       <h6><time>June 13, 2016 at 2:03 p.m.</time></h6>
-      <h3>Aenean posuere enim non viverra</h3>
+      <h3><a href="#">Aenean posuere enim non viverra</a></h3>
     </header> <!-- /post-header -->
     <div class="post-body">
       <p>Curabitur ornare lacus vitae purus interdum congue. In eleifend massa ut lacus malesuada, nec sollicitudin nisi lacinia. Fusce erat quam, euismod nec lobortis molestie, sodales vel augue. Nullam bibendum dapibus lectus.</p>
