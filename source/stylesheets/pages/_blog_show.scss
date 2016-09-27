@@ -4,7 +4,6 @@ body.blog-show {
     @include pad(0 ($column * 2));
   }
 
-
   .post-header {
     h3 {
       font-size: calc-em(42px);
