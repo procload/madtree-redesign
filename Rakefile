@@ -3,35 +3,19 @@ task :build do
   system "bundle exec middleman build"
 end
 
-# MadTree Staging and Production URLs
-production_url = "https://madtreebrewing.com/"
-staging_url = "https://madtree-staging.herokuapp.com/"
+# MadTree Redesign URL
+production_url = "https://madtree-redesign.herokuapp.com/"
 
-# Deploys to Heroku Staging
-multitask :heroku_staging do
-  puts "## Pushing to Github"
-  system "git push origin develop"
-  puts "## Deploying to Staging"
-  puts "\n## Pushing to #{staging_url}"
-  system "git push staging develop:master"
-end
-
-# Deploys to Heroku Production
-multitask :heroku_production do
+# Deploys to Heroku
+multitask :heroku do
   puts "## Deploying to Production"
   puts "\n## Pushing to #{production_url}"
-  system "git push production master"
+  system "git push heroku master"
 end
 
-namespace :staging do
-  desc "Push source to Heroku staging and build"
-    task :deploy => [:heroku_staging] do
-  end
-end
-
-namespace :production do
+namespace :heroku do
   desc "Push source to Heroku production and build"
-    task :deploy => [:heroku_production] do
+    task :deploy => [:heroku] do
   end
 end
 
@@ -40,4 +24,3 @@ namespace :assets do
     sh "bundle exec middleman build"
   end
 end
-
