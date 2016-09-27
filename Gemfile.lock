@@ -108,6 +108,7 @@ GEM
     rack-livereload (0.3.16)
       rack
     rack-rewrite (1.5.1)
+    rake (10.4.2)
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
@@ -137,6 +138,7 @@ DEPENDENCIES
   middleman-livereload (~> 3.4.6)
   neat
   rack-rewrite
+  rake
   therubyracer
 
 RUBY VERSION

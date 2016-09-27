@@ -1,6 +1,8 @@
 source "https://rubygems.org"
 ruby "2.3.1"
 
+gem "rake"
+
 gem "rack-rewrite"
 
 gem "json", "~> 1.8.3"
