@@ -60,6 +60,7 @@
 @import "pages/employees";
 @import "pages/events";
 @import "pages/home";
+@import "pages/store_index";
 @import "pages/taproom";
 @import "pages/tours";
 
@@ -261,6 +262,23 @@
 }
 
 // -------------------------------------
+//   Input Group
+// -------------------------------------
+.input-group {
+
+  .form-control {
+    height: calc-em(35px, 14px);
+    background: $white;
+  }
+
+  .input-group-btn {
+    .btn {
+      font-size: 18px;
+    }
+  }
+}
+
+// -------------------------------------
 //   Site Header
 // -------------------------------------
 
@@ -333,12 +351,13 @@
     a {
       font-family: $font-family-headings;
       text-transform: uppercase;
-      font-size: calc-em(18px);
+      font-size: calc-em(21px);
       color: $gray-dark;
       display: block;
       text-align: right;
-      padding: calc-em(10px, 18px);
-      line-height: calc-em(50px, 18px);
+      padding: calc-em(10px, 21px);
+      line-height: calc-em(50px, 21px);
+      font-weight: 600;
     }
 
     &.subnav {
@@ -350,9 +369,24 @@
         color: $gray-light;
         padding-top: 0;
         margin-top: -20px;
+        font-weight: 400;
       }
     }
   }// .nav-list
+
+  .search {
+    label {
+      display: none;
+    }
+
+    input {
+      border-radius: calc-em(15px, 14px);
+      font-size: calc-em(14px);
+      height: calc-em(30px, 14px);
+      margin-top: -(calc-em(18px, 14px));
+      width: calc-em(130px, 14px);
+    }
+  }
 }// .site-header
 
 // -------------------------------------

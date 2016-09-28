@@ -24,17 +24,19 @@
           <li><a href="#">Limited Draft</a></li>
           <li><a href="#">Series</a></li>
           <li><a href="#">Retired</a></li>
+          <% if current_page.data.store? %>
+          <li class="search">
+            <form class="search-form">
+              <div class="form-group">
+                <label for="search-store">Search Store</label>
+                <input id="search-store" type="search" placeholder="Search Store" class="form-control search">
+              </div>
+            </form>
+          </li> <!-- /search -->
+        <% end %>
         </ul>
       <% end %>
     </nav>
-    <% if current_page.data.store? %>
-      <form class="search">
-        <div class="form-group">
-          <label for="search-store">Search Store</label>
-          <input id="search-store" type="search" placeholder="Search Store" class="form-control search">
-        </div>
-      </form>
-    <% end %>
     </nav> <!-- /site-nav -->
   </div> <!-- /container -->
 </header> <!-- /site-header -->

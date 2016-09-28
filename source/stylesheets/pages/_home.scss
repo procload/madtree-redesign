@@ -29,6 +29,7 @@ body.home {
 
     h2 {
       color: $white;
+      font-weight: 400;
       font-size: calc-em(29px);
     }
 
@@ -50,13 +51,49 @@ body.home {
     text-align: center;
 
     h3 {
-      font-weight: normal;
       margin-bottom: calc-em(8px, 20px);
+      font-weight: 600;
     }
 
     p {
       font-size: calc-em(14px);
       font-weight: 100;
+    }
+
+    &.where {
+      .btn {
+        margin-bottom: calc-em(16px);
+      }
+    }
+
+    &.sign-up {
+      .input-group {
+        width: 80%;
+        margin: 0 auto calc-em(16px);
+      }
+    }
+
+    &.visit {
+      h5 {
+        font-size: calc-em(16px);
+        font-weight: 600;
+      }
+
+      .address,
+      .phone,
+      .street {
+        display: block;
+        font-weight: 100;
+        line-height: calc-em(20px, 16px);
+      }
+
+      .address {
+        margin-bottom: calc-em(16px);
+      }
+
+      .phone a {
+        color: $gray-dark;
+      }
     }
   }
 
@@ -70,6 +107,7 @@ body.home {
 
     h3 {
       margin-bottom: calc-em(20px, 20px);
+      font-weight: 600;
     }
   }
 

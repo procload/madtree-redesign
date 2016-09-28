@@ -11,45 +11,55 @@ store: true
   <meta name="description" content='Bringing canned craft beer to Cincinnati.' />
 <% end %>
 
+<% content_for :page_classes do %>store-index<% end %>
+
 <section class="page-marketing">
   <% 3.times do %>
-  <div class="marketing-pane">
-    <h3>New Madtree Prints</h3>
-    <p>Vestibulum a augue cursus, finibus Quisque fermentum varius rutrum sed.</p>
-  </div>
+  <a href="#" class="marketing-pane" style="background-image: url('http://unsplash.it/800x200');">
+    <div class="marketing-message">
+      <h3>New Madtree Prints</h3>
+      <p>Vestibulum a augue cursus, finibus Quisque fermentum varius rutrum sed.</p>
+    </div>
+  </a>
   <% end %>
 </section> <!-- /page-marketing -->
 
-<section class="store-categories">
-  <h3>Shop by Category</h3>
+<div class="container">
+  <section class="store-categories">
+    <h3 class="with-border">Shop by Category</h3>
 
-  <% 5.times do %>
-  <div class="beer-preview">
-    <%= link_to image_tag("http://placehold.it/125x125"), "#" %>
-    <h5><%= link_to "Apparel", "#" %></h5>
-  </div> <!-- category-preview -->
-  <% end %>
-</section> <!-- /store-categories -->
+    <div class="categories">
+      <% 5.times do %>
+        <div class="category-preview">
+          <%= link_to image_tag("http://placehold.it/125x125"), "#" %>
+          <h5><%= link_to "Apparel", "#" %></h5>
+        </div> <!-- category-preview -->
+      <% end %>
+    </div>
+  </section> <!-- /store-categories -->
 
-<section class="store-collections">
-  <h3>Shop by Collection</h3>
-  <% 3.times do %>
-  <div class="collection-preview">
-    <%= link_to image_tag("http://placehold.it/300x140"), "#" %>
-  </div> <!-- collection-preview -->
-  <% end %>
-</section> <!-- /store-collections -->
+  <section class="store-collections">
+    <h3 class="with-border">Shop by Collection</h3>
+    <% 3.times do %>
+      <div class="collection-preview">
+        <%= link_to image_tag("http://placehold.it/385x180"), "#" %>
+      </div> <!-- collection-preview -->
+    <% end %>
+  </section> <!-- /store-collections -->
 
-<section class="featured-products">
-  <h3>Featured Products</h3>
+  <section class="featured-products">
+    <h3 class="with-border">Featured Products</h3>
 
-  <% 12.times do %>
-  <div class="product-preview">
-    <%= link_to image_tag("http://placehold.it/160x275"), "#", class: "product-image" %>
-    <a href="#" class="preview-description">
-      <p>Product Name</p>
-      <span class="price">$22</span>
-    </a>
-  </div>
-  <% end %>
-</section> <!-- /featured-products -->
+    <div class="products">
+      <% 12.times do %>
+        <div class="product-preview">
+          <%= link_to image_tag("http://placehold.it/160x200"), "#", class: "product-image" %>
+          <a href="#" class="preview-description">
+            <p>Product Name</p>
+            <span class="price">$22</span>
+          </a>
+        </div>
+      <% end %>
+    </div>
+  </section> <!-- /featured-products -->
+</div>
