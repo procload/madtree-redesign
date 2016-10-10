@@ -1,2 +1,6 @@
-//= require ./libs/jquery
-//= require_tree ./public
+$(document).ready(function() {
+
+    $('.slideshow').slick({
+        dots: true
+    });
+});

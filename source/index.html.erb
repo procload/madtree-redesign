@@ -12,6 +12,7 @@ description: ""
 <% content_for :page_classes do %>home<% end %>
 
 <section class="slideshow">
+  <% 3.times do %>
   <div class="slide">
     <%= image_tag "http://unsplash.it/1600/650" %>
     <div class="caption">
@@ -21,6 +22,7 @@ description: ""
       </p>
     </div>
   </div> <!-- /slide -->
+  <% end %>
 </section> <!-- /slideshow -->
 
 

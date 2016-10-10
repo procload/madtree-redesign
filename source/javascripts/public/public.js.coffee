@@ -9,3 +9,6 @@ $ ->
         ).blur ->
           @value = val  if $.trim(@value) is ""
 
+    $(".slideshow").slick()
+
+    console.log "Hello"

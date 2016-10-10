@@ -22,6 +22,12 @@
 // ----- Awesomplete ----- //
 @import "libs/awesomplete";
 
+// ----- Slick ----- //
+@import "libs/slick/slick";
+
+// ----- Slick Theme ----- //
+@import "libs/slick/slick-theme";
+
 // ----- Bootstrap Misc. ----- //
 @import "libs/bootstrap";
 
@@ -75,6 +81,45 @@
 .container {
   @include outer-container;
 }
+
+// -------------------------------------
+//   Slick Overrides
+// -------------------------------------
+
+
+.slick-next,
+.slick-prev {
+  z-index: 1000;
+  top: 90%;
+  width: 30px;
+  height: 30px;
+
+  &:before {
+    font-size: 30px;
+  }
+}
+
+.slick-prev {
+  left: 15px;
+}
+
+.slick-next {
+  right: 15px;
+}
+
+
+.slideshow {
+  .slick-dots {
+    bottom: 5px;
+
+    li button:before {
+      font-size: 12px;
+      color: $white;
+    }
+  }
+
+}
+
 
 // -------------------------------------
 //   Navlist
