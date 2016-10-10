@@ -61,6 +61,7 @@
 // -------------------------------------
 
 @import "pages/about";
+@import "pages/assets";
 @import "pages/beer_category";
 @import "pages/beer_detail";
 @import "pages/beer_index";
@@ -70,6 +71,7 @@
 @import "pages/employees";
 @import "pages/events";
 @import "pages/home";
+@import "pages/store_category";
 @import "pages/store_detail";
 @import "pages/store_index";
 @import "pages/taproom";
@@ -459,20 +461,26 @@
     }
   }// .nav-list
 
-  .search {
-    label {
-      display: none;
-    }
-
-    input {
-      border-radius: calc-em(15px, 14px);
-      font-size: calc-em(14px);
-      height: calc-em(30px, 14px);
-      margin-top: -(calc-em(18px, 14px));
-      width: calc-em(130px, 14px);
-    }
+  .search input {
+    margin-top: -(calc-em(18px, 14px));
+    width: calc-em(130px, 14px);
   }
 }// .site-header
+
+// -------------------------------------
+//   Search Form
+// -------------------------------------
+.search {
+  label {
+    display: none;
+  }
+
+  input {
+    border-radius: calc-em(15px, 14px);
+    font-size: calc-em(14px);
+    height: calc-em(30px, 14px);
+  }
+}
 
 // -------------------------------------
 //   Site Footer

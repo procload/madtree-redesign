@@ -9,18 +9,29 @@ description: ""
   <meta name="description" content='Bringing canned craft beer to Cincinnati.' />
 <% end %>
 
+<% content_for :page_classes do %>assets<% end %>
+
 <section class="logos">
+  <h3>Logos</h3>
   <% 3.times do %>
     <%= link_to image_tag("http://placehold.it/320x160"), "#", class: "logo" %>
   <% end %>
 </section> <!-- /logos -->
 
 <section class="press-photos">
+  <h3>Press Photos</h3>
   <% 8.times do %>
-    <%= link_to image_tag("http://placehold.it/170x170"), "#", class: "press-photo" %>
+    <%= link_to image_tag("http://placehold.it/190x190"), "#", class: "press-photo" %>
   <% end %>
 </section> <!-- /press-photos -->
 
 <section class="beer-assets">
+  <h3>Beer Assets</h3>
+  <form class="search-form search">
+    <div class="form-group">
+      <label for="search-store">Search Beers</label>
+      <input id="search-store" type="search" placeholder="Search Beers" class="form-control search">
+    </div>
+  </form>
 
 </section> <!--/beer-assets -->

@@ -3,6 +3,8 @@ description: ""
 sub_nav: true
 store: true
 ---
+<% content_for :page_classes do %>store-category<% end %>
+
 <% content_for :meta_information do %>
   <meta property="og:title" content='MadTree Brewing' />
   <meta property="og:image" content='http://madtreebrewing.com/images/cans.png' />
@@ -15,21 +17,6 @@ store: true
   <%= image_tag "http://placehold.it/1600x300", class: "hero-image" %>
 </section> <!-- /page-hero -->
 
-<div class="filters">
-  <div class="shop-filter">
-    <strong>Filter By</strong>:
-    <a href="#" class="filter active">Men</a>
-    <a href="#" class="filter">Women</a>
-    <a href="#" class="filter">Outerwear</a>
-    <select class="filter">
-      <option>Size</option>
-      <option>Small</option>
-      <option>Medium</option>
-      <option>Large</option>
-    </select>
-  </div> <!-- /shop-filter -->
-</div> <!-- /filters -->
-
 <div class="shop-sorting">
   <a href="#" class="sort active">$</a>
   <a href="#" class="sort">$$$</a>
@@ -40,14 +27,31 @@ store: true
 </div> <!-- /shop-sorting -->
 
 <div class="category-products">
-  <% 9.times do %>
-  <div class="product-preview">
-    <%= link_to image_tag("http://placehold.it/160x275"), "#", class: "product-image" %>
-    <a href="#" class="preview-description">
-      <p>Product Name</p>
-      <span class="price">$22</span>
-    </a>
+  <div class="filters">
+    <div class="shop-filter">
+      <strong>Filter By:</strong>
+      <a href="#" class="filter active">Men</a>
+      <a href="#" class="filter">Women</a>
+      <a href="#" class="filter">Outerwear</a>
+      <select class="filter">
+        <option>Size</option>
+        <option>Small</option>
+        <option>Medium</option>
+        <option>Large</option>
+      </select>
+    </div> <!-- /shop-filter -->
+  </div> <!-- /filters -->
+
+  <div class="products">
+    <% 9.times do %>
+      <div class="product-preview">
+        <%= link_to image_tag("http://placehold.it/285x285"), "#", class: "product-image" %>
+        <a href="#" class="preview-description">
+          <p>Product Name</p>
+          <span class="price">$22</span>
+        </a>
+      </div>
+    <% end %>
   </div>
-  <% end %>
 </div>
 

@@ -1,0 +1,37 @@
+body.assets {
+
+  h3 {
+    font-size: calc-em(28px);
+  }
+
+  .logos {
+    @extend %group;
+    margin-bottom: calc-em(64px);
+
+    .logo {
+      @include span-columns(4);
+      display: block;
+
+    }
+  }
+
+  .press-photos {
+    @extend %group;
+    margin-bottom: calc-em(64px);
+
+    .press-photo {
+      @include span-columns(2);
+      @include omega(7n);
+      display: block;
+      margin-bottom: calc-em(16px);
+    }
+  }
+
+  .beer-assets {
+    margin-bottom: calc-em(64px);
+
+    input {
+      width: 33%;
+    }
+  }
+}
