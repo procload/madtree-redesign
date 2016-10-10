@@ -11,6 +11,8 @@ store: true
   <meta name="description" content='Bringing canned craft beer to Cincinnati.' />
 <% end %>
 
+<% content_for :page_classes do %>store-detail<% end %>
+
 <section class="product-images">
   <div class="main-product-image">
     <%= image_tag "http://placehold.it/540x511" %>
@@ -41,7 +43,6 @@ store: true
           <option>Medium</option>
           <option>Large</option>
         </select>
-        <a href="#" class="size-chart">Size Chart</a>
       </div>
 
       <div class="form-group">
@@ -53,6 +54,7 @@ store: true
         </select>
       </div>
       <button type="submit" class="btn btn-primary">Add to Cart</button>
+      <a href="#" class="size-chart">Size Chart</a>
     </form>
   </div> <!-- /product-actions -->
 

@@ -1,0 +1,22 @@
+.store-detail {
+
+  .product-images {
+    @include span-columns(7);
+  }// .product-images
+
+  .product-details {
+    @include span-columns(5);
+    @include omega();
+
+    h2,
+    .product-description,
+    .product-actions {
+      text-align: center;
+    }
+  }// .product-details
+
+  .related-products {
+    clear: both;
+  }
+
+}// .store-detail
