@@ -28,6 +28,9 @@
 // ----- Slick Theme ----- //
 @import "libs/slick/slick-theme";
 
+// ----- Font Awesome ----- //
+@import "libs/font-awesome/font-awesome";
+
 // ----- Bootstrap Misc. ----- //
 @import "libs/bootstrap";
 
@@ -260,6 +263,10 @@
 .on-tap-beer {
   width: 20%;
   margin-bottom: calc-em(30px);
+
+  h4 {
+    font-weight: 600;
+  }
 
   p {
     margin-bottom: 0;

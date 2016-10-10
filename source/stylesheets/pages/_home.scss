@@ -43,12 +43,15 @@ body.home {
 // -------------------------------------
   .ctas {
     @extend %group;
-    margin-bottom: calc-em(40px);
+    margin-bottom: calc-em(60px);
+    overflow: hidden;
   }
 
   .cta {
     @include span-columns(4);
+    border-right: 1px solid $gray-lighter;
     text-align: center;
+    padding: calc-em(10px) 2%;
 
     h3 {
       margin-bottom: calc-em(8px, 20px);
@@ -94,8 +97,19 @@ body.home {
       .phone a {
         color: $gray-dark;
       }
+
+    } // .visit
+
+    &:first-child {
+      padding-bottom: 9999px;
+      margin-bottom: -9999px;
     }
-  }
+
+    &:last-child {
+      border: none;
+      padding-right: 0;
+    }
+  }// .cta
 
 // -------------------------------------
 //   OnTap
