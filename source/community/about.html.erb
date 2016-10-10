@@ -10,6 +10,8 @@ sub_nav: true
   <meta name="description" content='Bringing canned craft beer to Cincinnati.' />
 <% end %>
 
+<% content_for :page_classes do %>about<% end %>
+
 <section class="page-hero">
   <%= image_tag "http://placehold.it/1600x300", class: "hero-image" %>
 
@@ -20,20 +22,25 @@ sub_nav: true
 </section> <!-- page-hero -->
 
 <section class="timeline">
-  <% 6.times do %>
-  <div class="timeline-entry">
-    <header class="timeline-header">
-      <h6>March, 2008</h6>
-      <h3>Section Title</h3>
-    </header>
-    <div class="timeline-photo">
-      <%= image_tag "http://placehold.it/430x220" %>
-    </div>
-    <div class="timeline-text">
-      <p>Curabitur ornare lacus vitae purus interdum congue. In eleifend massa ut lacus malesuada, nec sollicitudin nisi lacinia. Fusce erat quam, euismod nec lobortis molestie, sodales vel augue. Nullam bibendum dapibus lectus. Pellentesque interdum, dui et eleifend egestas, libero nisi ultrices felis, nec ullamcorper justo diam molestie lectus. Nam vitae nisl ut quam dignissim facilisis id sed eros.</p>
-    </div>
-  </div> <!-- /timeline-entry -->
-  <% end %>
+  <ul>
+
+    <% 6.times do %>
+    <li>
+      <div class="timeline-entry">
+        <header class="timeline-header">
+          <h6>March, 2008</h6>
+          <h3>Section Title</h3>
+        </header>
+        <div class="timeline-photo">
+          <%= image_tag "http://placehold.it/430x220" %>
+        </div>
+        <div class="timeline-text">
+          <p>Curabitur ornare lacus vitae purus interdum congue. In eleifend massa ut lacus malesuada, nec sollicitudin nisi lacinia. Fusce erat quam, euismod nec lobortis molestie, sodales vel augue. Nullam bibendum dapibus lectus. Pellentesque interdum, dui et eleifend egestas, libero nisi ultrices felis, nec ullamcorper justo diam molestie lectus. Nam vitae nisl ut quam dignissim facilisis id sed eros.</p>
+        </div>
+      </div> <!-- /timeline-entry -->
+    </li>
+    <% end %>
+  </ul>
 </section> <!-- /timeline -->
 
 <section class="page-outro">
