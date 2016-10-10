@@ -51,20 +51,11 @@ body.store-index {
     .products {
       @extend %group;
     }
+  }
 
-    .product-preview {
-      @include span-columns(3);
-      @include omega(4n);
-      text-align: center;
-
-      a p {
-        color: $gray;
-        margin-bottom: 0;
-      }
-
-
-    }
-
+  .product-preview {
+    @include span-columns(3);
+    @include omega(4n);
   }
 }// .store-index
 

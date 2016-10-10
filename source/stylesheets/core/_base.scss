@@ -66,6 +66,8 @@ h3 {
     color: $gray-light;
     display: table;
     white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
 
     &:before,
     &:after {
@@ -126,6 +128,10 @@ strong {
 }
 
 // ----- List elements ----- //
+
+ul, ol {
+  margin-top: 0;
+}
 
 dt {
   margin-bottom: 0.5em;
