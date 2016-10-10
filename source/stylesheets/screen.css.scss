@@ -79,10 +79,22 @@
 
 .main-content {
   @include outer-container;
+  padding: 0 1.5%;
+
+  @include respond-to(75em) {
+    //1200px
+    padding: 0;
+  }
 } //main-content
 
 .container {
   @include outer-container;
+  padding: 0 1.5%;
+
+  @include respond-to(75em) {
+    //1200px
+    padding: 0;
+  }
 }
 
 // -------------------------------------
@@ -482,6 +494,10 @@
     .contact-emails,
     .social-links {
       @extend %zero-list;
+
+      li {
+        margin-right: calc-em(5px, 14px);
+      }
     }
   }
 
