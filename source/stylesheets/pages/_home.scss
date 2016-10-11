@@ -42,13 +42,15 @@ body.home {
 //   CTAs
 // -------------------------------------
   .ctas {
-    @extend %group;
     margin-bottom: calc-em(60px);
     overflow: hidden;
+
+    @include display(flex);
+
   }
 
   .cta {
-    @include span-columns(4);
+    width: 33.3333%;
     border-right: 1px solid $gray-lighter;
     text-align: center;
     padding: calc-em(10px) 2%;
