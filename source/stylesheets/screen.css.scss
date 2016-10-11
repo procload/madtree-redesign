@@ -445,6 +445,10 @@
       padding: calc-em(10px, 21px);
       line-height: calc-em(50px, 21px);
       font-weight: 600;
+
+      &.active {
+        color: $brand-primary;
+      }
     }
 
     &.subnav {
