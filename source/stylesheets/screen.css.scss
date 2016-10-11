@@ -55,6 +55,7 @@
 // -------------------------------------
 
 @import "modules/button";
+@import "modules/header";
 
 // -------------------------------------
 //   Pages
@@ -379,82 +380,6 @@
     font-size: calc-em(26px);
   }
 }
-
-
-// -------------------------------------
-//   Site Header
-// -------------------------------------
-
-.site-header {
-  padding-top: calc-em(32px);
-  margin-bottom: calc-em(32px);
-
-  .container {
-    @extend %group;
-  }
-
-  h1 {
-    @include span-columns(4);
-
-    a {
-      display: block;
-      text-indent: -9999px;
-      background: image-url('img-logo.svg') no-repeat top left;
-      background-size: 220px 110px;
-      height: calc-em(110px, 60px);
-    }
-  }
-
-  .site-nav {
-    @extend %group;
-  }
-
-  .nav-list {
-    @include span-columns(8);
-    @include display(flex);
-    @include justify-content(space-between);
-    @include flex-direction(row);
-    margin-top: calc-em(40px);
-    text-align: right;
-
-    a {
-      font-family: $font-family-headings;
-      text-transform: uppercase;
-      font-size: calc-em(21px);
-      color: $gray-dark;
-      display: block;
-      text-align: right;
-      padding: calc-em(10px, 21px);
-      line-height: calc-em(50px, 21px);
-      font-weight: 600;
-
-      &:hover,
-      &:focus,
-      &:active,
-      &.active {
-        color: $brand-primary;
-      }
-    }
-
-    &.subnav {
-      margin-top: 0;
-      float: right;
-
-      a {
-        font-size: calc-em(16px);
-        color: $gray-light;
-        padding-top: 0;
-        margin-top: -20px;
-        font-weight: 400;
-      }
-    }
-  }// .nav-list
-
-  .search input {
-    margin-top: -(calc-em(18px, 14px));
-    width: calc-em(130px, 14px);
-  }
-}// .site-header
 
 // -------------------------------------
 //   Search Form

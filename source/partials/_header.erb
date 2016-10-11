@@ -1,7 +1,8 @@
 <header class="site-header">
   <div class="container">
-    <nav class="site-nav">
+    <nav class="site-nav open">
       <h1 class="logo"><a href="#">Madtree Brewing</a></h1>
+      <a href="#" class="nav-toggle"><i class="fa fa-reorder"></i></a>
 
       <ul class="nav-list">
         <li><a href="#" class="active">Beers</a>
@@ -13,7 +14,7 @@
         <li><a href="#">Blog</a></li>
       </ul> <!-- /nav-list -->
     </nav>
-    <nav class="site-nav">
+    <nav class="site-nav sub">
       <% if current_page.data.sub_nav? %>
         <ul class="subnav nav-list">
           <li><a href="#">Happy Amber</a></li>
@@ -36,7 +37,6 @@
         <% end %>
         </ul>
       <% end %>
-    </nav>
     </nav> <!-- /site-nav -->
   </div> <!-- /container -->
 </header> <!-- /site-header -->
