@@ -11,4 +11,5 @@ $ ->
 
     $(".slideshow").slick()
 
-    console.log "Hello"
+    $(".on-tap-slideshow").slick()
+

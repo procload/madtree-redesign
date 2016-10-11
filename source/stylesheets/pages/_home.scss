@@ -1,8 +1,8 @@
 body.home {
 
-// -------------------------------------
-//   Slideshow
-// -------------------------------------
+  // -------------------------------------
+  //   Slideshow
+  // -------------------------------------
   .slideshow {
     margin-bottom: calc-em(25px);
 
@@ -38,9 +38,9 @@ body.home {
     }
   }// .caption
 
-// -------------------------------------
-//   CTAs
-// -------------------------------------
+  // -------------------------------------
+  //   CTAs
+  // -------------------------------------
   .ctas {
     margin-bottom: calc-em(60px);
     overflow: hidden;
@@ -113,9 +113,9 @@ body.home {
     }
   }// .cta
 
-// -------------------------------------
-//   OnTap
-// -------------------------------------
+  // -------------------------------------
+  //   OnTap
+  // -------------------------------------
 
   .on-tap {
     text-align: center;
@@ -133,5 +133,43 @@ body.home {
     @include flex-wrap(wrap);
   }
 
+  .slideshow {
 
+    .slick-next,
+    .slick-prev {
+      top: 90%;
+    }
+
+    .slick-prev {
+      left: 15px;
+    }
+
+    .slick-next {
+      right: 15px;
+    }
+
+
+    .slideshow {
+      .slick-dots {
+        bottom: 5px;
+
+        li button:before {
+          font-size: 12px;
+          color: $white;
+        }
+      }
+
+    }
+  }
+
+  .on-tap-slideshow {
+    .slick-next,
+    .slick-prev {
+      top: 42%;
+      
+      &:before {
+        color: $gray-light;
+      }
+    }
+  }
 }
