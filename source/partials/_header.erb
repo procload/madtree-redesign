@@ -1,22 +1,22 @@
 <header class="site-header">
   <div class="container">
-    <nav class="site-nav open">
+    <nav class="site-nav main open">
       <h1 class="logo"><a href="#">Madtree Brewing</a></h1>
       <a href="#" class="nav-toggle"><i class="fa fa-reorder"></i></a>
 
       <ul class="nav-list">
-        <li><a href="#" class="active">Beers</a>
+        <li><a href="#" class="active" data-children="beers">Beers <i class="fa fa-caret-right"></i></a>
         </li>
-        <li><a href="#">Store</a></li>
-        <li><a href="#">Community</a></li>
-        <li><a href="#">Events</a></li>
-        <li><a href="#">Taproom</a></li>
-        <li><a href="#">Blog</a></li>
+        <li><a href="#">Store <i class="fa fa-caret-right"></i></a></li>
+        <li><a href="#">Community <i class="fa fa-caret-right"></i></a></li>
+        <li><a href="#">Events <i class="fa fa-caret-right"></i></a></li>
+        <li><a href="#">Taproom <i class="fa fa-caret-right"></i></a></li>
+        <li><a href="#">Blog <i class="fa fa-caret-right"></i></a></li>
       </ul> <!-- /nav-list -->
     </nav>
     <nav class="site-nav sub">
       <% if current_page.data.sub_nav? %>
-        <ul class="subnav nav-list">
+        <ul class="subnav nav-list" data-group="beers">
           <li><a href="#">Happy Amber</a></li>
           <li><a href="#">Lift</a></li>
           <li><a href="#">PSA</a></li>

@@ -63,6 +63,37 @@
 
     &.sub {
       display: none;
+
+    }
+
+    &.open {
+      .nav-list {
+        height: auto;
+        position: relative;
+        top: 60px;
+        width: 100%;
+        background: $white;
+        left: 0;
+        right: 0;
+        display: block;
+
+        &.cloned {
+          top: 1px;
+          margin-bottom: calc-em(10px);
+          display: none;
+
+          &.open {
+            display: block;
+          }
+
+          li a {
+            padding-bottom: 0;
+          }
+          @include respond-to(800px) {
+            display: none;
+          }
+        }
+      }
     }
   }
 
@@ -79,15 +110,29 @@
     }
 
     li {
+      @extend %group;
       display: block;
       width: 100%;
-      border-bottom: 1px solid $gray-lighter;
       text-align: left;
 
       @include respond-to(800px) {
         width: auto;
-        border: none;
         text-align: right;
+      }
+
+      .active {
+        i {
+          float: right;
+          line-height: calc-em(45px);
+          display: block;
+        }
+        @include respond-to(800px) {
+          display: none;
+        }
+      }
+
+      i {
+        display: none;
       }
     }
 
@@ -101,6 +146,7 @@
       padding: calc-em(10px, 21px);
       line-height: calc-em(50px, 21px);
       font-weight: 600;
+      border-bottom: 1px solid $gray-lighter;
 
       &:hover,
       &:focus,
@@ -110,6 +156,7 @@
       }
 
       @include respond-to(800px) {
+        border: none;
         text-align: right;
       }
     }
@@ -122,24 +169,14 @@
         font-size: calc-em(16px);
         color: $gray-light;
         padding-top: 0;
-        margin-top: -20px;
         font-weight: 400;
+
+        @include respond-to(800px) {
+          margin-top: -20px;
+        }
       }
     }
 
-    .open & {
-      height: auto;
-
-      .nav-list {
-        position: relative;
-        top: 60px;
-        width: 100%;
-        background: $white;
-        left: 0;
-        right: 0;
-        display: block;
-      }
-    }
   }// .nav-list
 
   .nav-toggle {
