@@ -28,10 +28,33 @@ body.assets {
   }
 
   .beer-assets {
+    @extend %group;
     margin-bottom: calc-em(64px);
 
     input {
-      width: 33%;
+      width: 100%;
+    }
+  }
+
+  .asset-search {
+    @include span-columns(3);
+  }
+
+  .asset-group {
+    @include span-columns(9);
+    @include omega();
+    padding: calc-em(10px) calc-em(20px);
+    background: $gray-lightest;
+    border-radius: 4px;
+    border: 1px solid $gray-lighter;
+
+    .asset {
+      @include span-columns(3 of 9);
+      @include omega(4n);
+
+      a {
+        display: block;
+      }
     }
   }
 }

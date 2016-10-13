@@ -14,7 +14,7 @@ description: ""
 <section class="logos">
   <h3>Logos</h3>
   <% 3.times do %>
-    <%= link_to image_tag("http://placehold.it/320x160"), "#", class: "logo" %>
+    <%= link_to image_tag("http://placehold.it/385x160"), "#", class: "logo" %>
   <% end %>
 </section> <!-- /logos -->
 
@@ -27,11 +27,30 @@ description: ""
 
 <section class="beer-assets">
   <h3>Beer Assets</h3>
-  <form class="search-form search">
-    <div class="form-group">
-      <label for="search-store">Search Beers</label>
-      <input id="search-store" type="search" placeholder="Search Beers" class="form-control search">
+  <div class="asset-search">
+    <form class="search-form search">
+      <div class="form-group">
+        <label for="search-store">Search Beers</label>
+        <input id="search-store" type="search" placeholder="Search Beers" class="form-control search">
+      </div>
+    </form>
+  </div> <!-- /asset-search -->
+  <div class="asset-group">
+    <h4>Happy Amber Assets</h4>
+    <div class="asset">
+      <h5>Tap Handle</h5>
+      <%= link_to image_tag("http://unsplash.it/270/270"), "#" %>
     </div>
-  </form>
+
+    <div class="asset">
+      <h5>Sale Sheet</h5>
+      <%= link_to image_tag("http://unsplash.it/270/270"), "#" %>
+    </div>
+
+    <div class="asset">
+      <h5>Promo Image</h5>
+      <%= link_to image_tag("http://unsplash.it/270/270"), "#" %>
+    </div>
+  </div> <!-- /asset-group-->
 
 </section> <!--/beer-assets -->
