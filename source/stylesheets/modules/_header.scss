@@ -51,6 +51,13 @@
     border-bottom: 1px solid $gray;
     z-index: 99999;
 
+    &.sub {
+      display: none;
+      @include respond-to(800px) {
+        display: block;
+      }
+    }
+
     @include respond-to(800px) {
       position: static;
       left: auto;
@@ -59,41 +66,6 @@
       bottom: auto;
       height: auto;
       border: none;
-    }
-
-    &.sub {
-      display: none;
-
-    }
-
-    &.open {
-      .nav-list {
-        height: auto;
-        position: relative;
-        top: 60px;
-        width: 100%;
-        background: $white;
-        left: 0;
-        right: 0;
-        display: block;
-
-        &.cloned {
-          top: 1px;
-          margin-bottom: calc-em(10px);
-          display: none;
-
-          &.open {
-            display: block;
-          }
-
-          li a {
-            padding-bottom: 0;
-          }
-          @include respond-to(800px) {
-            display: none;
-          }
-        }
-      }
     }
   }
 
@@ -105,8 +77,29 @@
       @include display(flex);
       @include justify-content(space-between);
       @include flex-direction(row);
-      margin-top: calc-em(40px);
+      margin-top: calc-em(30px);
       text-align: right;
+    }
+
+    &.subnav {
+      display: none;
+      margin-top: 0;
+      float: right;
+
+      a {
+        font-size: calc-em(16px);
+        color: $gray-light;
+        padding-top: 0;
+        font-weight: 400;
+
+        @include respond-to(800px) {
+          margin-top: -20px;
+        }
+      }
+
+      @include respond-to(800px) {
+        @include display(flex);
+      }
     }
 
     li {
@@ -120,19 +113,32 @@
         text-align: right;
       }
 
-      .active {
+      i {
+        display: none;
+      }
+
+      &.active {
         i {
           float: right;
           line-height: calc-em(45px);
+          padding-right: calc-em(10px);
           display: block;
         }
+
+        a {
+          color: $brand-primary;
+
+          &:hover,
+          &:focus,
+          &:active,
+          &.active {
+            color: $brand-primary;
+          }
+        }
+
         @include respond-to(800px) {
           display: none;
         }
-      }
-
-      i {
-        display: none;
       }
     }
 
@@ -148,36 +154,50 @@
       font-weight: 600;
       border-bottom: 1px solid $gray-lighter;
 
-      &:hover,
-      &:focus,
-      &:active,
-      &.active {
-        color: $brand-primary;
-      }
-
       @include respond-to(800px) {
         border: none;
         text-align: right;
       }
     }
 
-    &.subnav {
-      margin-top: 0;
-      float: right;
+    &.open {
+      height: auto;
+      position: relative;
+      top: 60px;
+      width: 100%;
+      background: $white;
+      left: 0;
+      right: 0;
+      display: block;
 
-      a {
-        font-size: calc-em(16px);
-        color: $gray-light;
-        padding-top: 0;
-        font-weight: 400;
+      &.cloned {
+        top: 1px;
+        margin-bottom: calc-em(10px);
+        display: none;
+
+        &.open {
+          display: block;
+        }
+
+        li a {
+          padding-bottom: 0;
+        }
 
         @include respond-to(800px) {
-          margin-top: -20px;
+          display: none;
         }
       }
-    }
 
-  }// .nav-list
+      @include respond-to(800px) {
+        @include span-columns(8);
+        @include display(flex);
+        @include justify-content(space-between);
+        @include flex-direction(row);
+        text-align: right;
+        top: 0;
+      }
+    }
+  }
 
   .nav-toggle {
     position: absolute;
@@ -195,4 +215,3 @@
     width: calc-em(130px, 14px);
   }
 }// .site-header
-

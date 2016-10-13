@@ -11,7 +11,7 @@ $(document).ready(function() {
     $('.nav-toggle').on('click', function(e) {
         e.preventDefault();
 
-        $mainNav = $('.site-nav.main');
+        $mainNav = $('.site-nav.main > .nav-list');
         if ($mainNav.hasClass('open')) {
             $mainNav.removeClass('open');
         } else {
@@ -25,7 +25,7 @@ $(document).ready(function() {
     $subNav = $('.subnav');
     if ($subNav.data('group') == activeGroup) {
         copiedNav = $subNav.clone().addClass('cloned')
-        $('.site-nav.main .active').parent('li').append(copiedNav);
+        $('.site-nav.main .active').append(copiedNav);
     }
 
     $('.active i').on('click', function(e) {
