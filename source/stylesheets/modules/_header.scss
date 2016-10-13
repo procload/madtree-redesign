@@ -51,6 +51,16 @@
     border-bottom: 1px solid $gray;
     z-index: 99999;
 
+    &.main {
+      > .nav-list.open {
+        box-shadow: 0 0 5px rgba(0,0,0,.4);
+
+        @include respond-to(800px) {
+          box-shadow: none;
+        }
+      }
+    }
+
     &.sub {
       display: none;
       @include respond-to(800px) {
