@@ -71,6 +71,8 @@
 
   .nav-list {
     display: none;
+    max-height: 420px;
+    overflow-y: scroll;
 
     @include respond-to(800px) {
       @include span-columns(8);
@@ -78,6 +80,7 @@
       @include justify-content(space-between);
       @include flex-direction(row);
       margin-top: calc-em(30px);
+      overflow-y: visible;
       text-align: right;
     }
 
@@ -120,8 +123,9 @@
       &.active {
         i {
           float: right;
-          line-height: calc-em(45px);
-          padding-right: calc-em(10px);
+          font-size: calc-em(21px);
+          line-height: calc-em(40px, 21px);
+          padding-right: calc-em(10px, 21px);
           display: block;
         }
 
@@ -179,8 +183,20 @@
           display: block;
         }
 
-        li a {
-          padding-bottom: 0;
+
+        li {
+
+          a {
+            color: $gray-dark;
+            padding-left: calc-em(30px);
+            padding-bottom: 0;
+          }
+
+          &.active {
+            a {
+              color: $brand-primary;
+            }
+          }
         }
 
         @include respond-to(800px) {
