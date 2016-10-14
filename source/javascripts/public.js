@@ -41,5 +41,11 @@ $(document).ready(function() {
         }
     })
 
+    // Popovers
+    $('.on-tap-beer > a').on('click', function(e) {
+        e.preventDefault();
+    });
+    $('[data-toggle="popover"]').popover()
+
 
 });
