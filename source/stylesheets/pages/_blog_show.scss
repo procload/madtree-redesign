@@ -2,12 +2,17 @@ body.blog-show {
 
   .main-content {
     @include pad(0 ($column * 2));
+    margin-bottom: calc-em(64px);
   }
 
   .post-header {
     h3 {
       font-size: calc-em(42px);
     }
+  }
+
+  .post-body {
+    margin-bottom: calc-em(32px);
   }
 
   p {

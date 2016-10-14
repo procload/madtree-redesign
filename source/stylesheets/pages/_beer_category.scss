@@ -13,9 +13,17 @@ body.beer-category {
   .beer-summary-text {
     @include span-columns(4 of 6);
     @include omega();
+
+    h3 {
+      font-size: calc-em(32px);
+    }
   }
 
   .beer-summary-stats {
     clear: both;
+    td {
+      font-size: calc-em(16px);
+      padding-bottom: calc-em(8px, 16px);
+    }
   }
 }
