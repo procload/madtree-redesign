@@ -12,6 +12,7 @@ description: ""
 <% content_for :page_classes do %>blog-index<% end %>
 
 <section class="blog-posts">
+  <h2>Showing all posts tagged <%= link_to "Brewing", "/blog/category.html" %></h2>
   <% 10.times do %>
   <article class="post">
     <header class="post-header">
@@ -49,9 +50,9 @@ description: ""
 <section class="blog-meta">
   <div class="topics">
     <h4>Topics</h4>
-    <%= link_to "Brewing", "#", class: "tag" %>
-    <%= link_to "Beer Release", "#", class: "tag" %>
-    <%= link_to "Events", "#", class: "tag" %>
-    <%= link_to "Construction", "#", class: "tag" %>
+    <%= link_to "Brewing", "/blog/category.html", class: "tag" %>
+    <%= link_to "Beer Release", "/blog/category.html", class: "tag" %>
+    <%= link_to "Events", "/blog/category.html", class: "tag" %>
+    <%= link_to "Construction", "/blog/category.html", class: "tag" %>
   </div>
 </section> <!-- /blog-meta -->

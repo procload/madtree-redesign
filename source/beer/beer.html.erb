@@ -52,11 +52,11 @@ sub_nav: true
   <h3>Related Merch</h3>
   <div class="merch">
     <%= link_to image_tag("http://placehold.it/285x230"), "#" %>
-    <%= link_to "Buy a T-shirt", "#" %>
+    <%= link_to "Buy a T-shirt", "/store/item.html" %>
   </div>
   <div class="merch">
     <%= link_to image_tag("http://placehold.it/285x230"), "#" %>
-    <%= link_to "Buy a Poster", "#" %>
+    <%= link_to "Buy a Poster", "/store/item.html" %>
   </div>
 </section> <!-- /related-merch -->
 
@@ -65,7 +65,7 @@ sub_nav: true
   <div>
     <% 8.times do %>
       <div class="beer-summary small">
-        <%= link_to image_tag("http://placehold.it/65x90"), "#", class: "beer-summary-image" %>
+        <%= link_to image_tag("http://placehold.it/65x90"), "/beer/beer.html", class: "beer-summary-image" %>
         <h4><a href="#">Galaxy High</a></h4>
         <table cellpadding="0" cellspacing="0" class="beer-info-table small">
           <tr>

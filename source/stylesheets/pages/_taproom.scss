@@ -97,7 +97,6 @@ body.taproom {
         color: $gray-dark;
       }
     }
-
   }
 
   .size,
@@ -111,5 +110,12 @@ body.taproom {
 
   .price {
     font-weight: normal;
+  }
+
+  .popover {
+    a {
+      display: block;
+      font-size: calc-em(14px);
+    }
   }
 }

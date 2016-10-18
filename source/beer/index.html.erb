@@ -2,14 +2,6 @@
 description: ""
 sub_nav: true
 ---
-<% content_for :meta_information do %>
-  <meta property="og:title" content='MadTree Brewing' />
-  <meta property="og:image" content='http://madtreebrewing.com/images/cans.png' />
-  <meta property="og:url" content='http://madtreebrewing.com/'/>
-  <meta property="og:description" content='Bringing canned craft beer to Cincinnati.' />
-  <meta name="description" content='Bringing canned craft beer to Cincinnati.' />
-<% end %>
-
 <% content_for :page_classes do %>beer-index<% end %>
 
 <section class="page-marketing">
@@ -30,8 +22,8 @@ sub_nav: true
     <div class="beers">
       <% 7.times do %>
         <div class="beer-preview">
-          <%= link_to image_tag("http://placehold.it/180x220"), "#" %>
-          <h5><%= link_to "Happy Amber", "#" %></h5>
+          <%= link_to image_tag("http://placehold.it/180x220"), "/beer/beer.html" %>
+          <h5><%= link_to "Happy Amber", "/beer/beer.html" %></h5>
         </div> <!-- beer-preview -->
       <% end %>
     </div>
@@ -43,13 +35,13 @@ sub_nav: true
     <div class="beers">
       <% 4.times do %>
         <div class="beer-preview">
-          <%= link_to image_tag("http://placehold.it/180x220"), "#" %>
-          <h5><%= link_to "Happy Amber", "#" %></h5>
+          <%= link_to image_tag("http://placehold.it/180x220"), "/beer/beer.html" %>
+          <h5><%= link_to "Happy Amber", "/beer/beer.html" %></h5>
         </div> <!-- beer-preview -->
       <% end %>
     </div>
 
-    <%= link_to "See All Seasonal", "#", class: "btn btn-primary" %>
+    <%= link_to "See All Seasonal", "/beer/category.html", class: "btn btn-primary" %>
   </section> <!-- seconadry-beers -->
 
   <section class="browse-beers">
@@ -60,12 +52,12 @@ sub_nav: true
       <div class="beers">
         <% 8.times do %>
           <div class="beer-preview">
-            <%= link_to image_tag("http://placehold.it/110x150"), "#" %>
-            <h5><%= link_to "Happy Amber", "#" %></h5>
+            <%= link_to image_tag("http://placehold.it/110x150"), "/beer/beer.html" %>
+            <h5><%= link_to "Happy Amber", "/beer/beer.html" %></h5>
           </div>
         <% end %>
       </div>
-      <%= link_to "See All Limited", "#", class: "btn btn-primary" %>
+      <%= link_to "See All Limited", "/beer/category.html", class: "btn btn-primary" %>
     </div> <!-- /beer-category -->
 
     <div class="beer-category">
@@ -73,12 +65,18 @@ sub_nav: true
       <div class="beers">
         <% 8.times do %>
           <div class="beer-preview">
-            <%= link_to image_tag("http://placehold.it/110x150"), "#" %>
-            <h5><%= link_to "Happy Amber", "#" %></h5>
+            <%= link_to image_tag("http://placehold.it/110x150"), "/beer/beer.html" %>
+            <h5><%= link_to "Happy Amber", "/beer/beer.html" %></h5>
           </div>
         <% end %>
       </div>
-      <%= link_to "See All Limited", "#", class: "btn btn-primary" %>
+      <%= link_to "See All Series", "/beer/category.html", class: "btn btn-primary" %>
+    </div> <!-- /beer-category -->
+    <div class="beer-category">
+      <h4>Retired</h4>
+      <%= link_to "See All Retired", "/beer/category.html", class: "btn btn-primary" %>
     </div> <!-- /beer-category -->
   </section> <!-- /browse-beers -->
+
+</section> <!-- /browse-beers -->
 </div>

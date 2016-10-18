@@ -7,7 +7,7 @@ store: true
 
 <section class="page-marketing">
   <% 3.times do %>
-  <a href="#" class="marketing-pane" style="background-image: url('http://unsplash.it/800x200');">
+  <a href="/store/category.html" class="marketing-pane" style="background-image: url('http://unsplash.it/800x200');">
     <div class="marketing-message">
       <h3>New Madtree Prints</h3>
       <p>Vestibulum a augue cursus, finibus Quisque fermentum varius rutrum sed.</p>
@@ -23,7 +23,7 @@ store: true
     <div class="categories">
       <% 5.times do %>
         <div class="category-preview">
-          <%= link_to image_tag("http://placehold.it/125x125"), "#" %>
+          <%= link_to image_tag("http://placehold.it/125x125"), "/store/category.html" %>
           <h5><%= link_to "Apparel", "/store/category.html" %></h5>
         </div> <!-- category-preview -->
       <% end %>
@@ -34,7 +34,7 @@ store: true
     <h3 class="with-border">Shop by Collection</h3>
     <% 3.times do %>
       <div class="collection-preview">
-        <%= link_to image_tag("http://placehold.it/385x180"), "#" %>
+        <%= link_to image_tag("http://placehold.it/385x180"), "/store/category.html" %>
       </div> <!-- collection-preview -->
     <% end %>
   </section> <!-- /store-collections -->
