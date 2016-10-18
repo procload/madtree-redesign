@@ -29,7 +29,7 @@ sub_nav: true
     <div class="days">
       <% 6.times do %>
         <div class="day">
-          <h4>Tuesday</h4>
+          <h5>Tuesday</h5>
           <span class="hours">4pm—11pm</span>
         </div>
       <% end %>
@@ -54,9 +54,14 @@ sub_nav: true
 
   <h4>Catch-a-Fire Hours</h4>
   <div class="cafe-hours">
-    <% 6.times do %>
-     <span class="day"><strong>Tuesday</strong> 4pm–11pm</span>
-    <% end %>
+    <div class="days">
+      <% 6.times do %>
+        <div class="day">
+          <h5>Tuesday</h5>
+          <span class="hours">4–11pm</span>
+        </div>
+      <% end %>
+    </div>
   </div>
   <%= link_to "Visit Catch-a-Fire Website", "#", class: "btn btn-primary" %>
 </section> <!-- /food -->

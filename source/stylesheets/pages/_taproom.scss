@@ -36,13 +36,19 @@ body.taproom {
   .taproom-hours {
     text-align: center;
 
-    .days {
-      @include display(flex);
-      @include justify-content(space-around);
+  }
 
-      .day {
-        width: 16.66667%;
-      }
+  .days {
+    @include display(flex);
+    @include justify-content(space-around);
+
+    .day {
+      width: 16.66667%;
+    }
+
+    .hours {
+      display: block;
+      font-size: calc-em(14px);
     }
   }
 
