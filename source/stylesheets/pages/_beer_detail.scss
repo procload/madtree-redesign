@@ -10,6 +10,14 @@ body.beer-detail {
 
   .beer-description {
     @include span-columns(7);
+
+    h2 {
+      margin-bottom: 0;
+    }
+
+    h3 {
+      margin-bottom: calc-em(16px, 18px);
+    }
   }
 
   .related-merch {
