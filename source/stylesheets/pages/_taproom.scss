@@ -75,10 +75,10 @@ body.taproom {
 
   .food {
     @include omega();
-  }
-
-  .cafe-hours {
-    margin-bottom: calc-em(24px);
+    
+    .cafe-hours {
+      margin-bottom: calc-em(24px);
+    }
   }
 
   .on-tap {
