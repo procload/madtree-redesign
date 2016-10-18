@@ -3,14 +3,6 @@ description: ""
 sub_nav: true
 store: true
 ---
-<% content_for :meta_information do %>
-  <meta property="og:title" content='MadTree Brewing' />
-  <meta property="og:image" content='http://madtreebrewing.com/images/cans.png' />
-  <meta property="og:url" content='http://madtreebrewing.com/'/>
-  <meta property="og:description" content='Bringing canned craft beer to Cincinnati.' />
-  <meta name="description" content='Bringing canned craft beer to Cincinnati.' />
-<% end %>
-
 <% content_for :page_classes do %>store-index<% end %>
 
 <section class="page-marketing">
@@ -32,7 +24,7 @@ store: true
       <% 5.times do %>
         <div class="category-preview">
           <%= link_to image_tag("http://placehold.it/125x125"), "#" %>
-          <h5><%= link_to "Apparel", "#" %></h5>
+          <h5><%= link_to "Apparel", "/store/category.html" %></h5>
         </div> <!-- category-preview -->
       <% end %>
     </div>
@@ -53,7 +45,7 @@ store: true
     <div class="products">
       <% 12.times do %>
         <div class="product-preview">
-          <%= link_to image_tag("http://placehold.it/285x285"), "#", class: "product-image" %>
+          <%= link_to image_tag("http://placehold.it/285x285"), "/store/item.html", class: "product-image" %>
           <a href="#" class="preview-description">
             <p>Product Name</p>
             <span class="price">$22</span>

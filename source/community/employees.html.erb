@@ -2,14 +2,6 @@
 description: ""
 sub_nav: true
 ---
-<% content_for :meta_information do %>
-  <meta property="og:title" content='MadTree Brewing' />
-  <meta property="og:image" content='http://madtreebrewing.com/images/cans.png' />
-  <meta property="og:url" content='http://madtreebrewing.com/'/>
-  <meta property="og:description" content='Bringing canned craft beer to Cincinnati.' />
-  <meta name="description" content='Bringing canned craft beer to Cincinnati.' />
-<% end %>
-
 <% content_for :page_classes do %>employees<% end %>
 
 <nav class="people-nav">
@@ -25,17 +17,19 @@ sub_nav: true
 <% 5.times do %>
 <section id="brewing" class="people-section">
   <h3>Brewing</h3>
-  <% 5.times do %>
-  <div class="person">
-    <div class="person-image">
-      <%= image_tag "http://placehold.it/385x385" %>
-    </div>
-    <div class="person-text">
-      <h4>Employee Name</h4>
-      <h5>Employee title</h5>
-      <p>Curabitur ornare lacus vitae purus interdum congue. In eleifend massa ut lacus malesuada, nec sollicitudin nisi lacinia. Fusce erat quam, euismod nec lobortis molestie, sodales vel augue. Nullam bibendum dapibus lectus. Pellentesque interdum, dui et eleifend egestas, libero nisi ultrices felis, nec ullamcorper justo diam molestie lectus. Nam vitae nisl ut quam dignissim facilisis id sed eros.</p>
-    </div>
-  </div> <!-- /person -->
-  <% end %>
+  <div class="people">
+    <% 5.times do %>
+      <div class="person">
+        <div class="person-image">
+          <%= image_tag "http://placehold.it/385x385" %>
+        </div>
+        <div class="person-text">
+          <h4>Employee Name</h4>
+          <h5>Employee title</h5>
+          <p>Curabitur ornare lacus vitae purus interdum congue. In eleifend massa ut lacus malesuada, nec sollicitudin nisi lacinia. Fusce erat quam, euismod nec lobortis molestie, sodales vel augue. Nullam bibendum dapibus lectus. Pellentesque interdum, dui et eleifend egestas, libero nisi ultrices felis, nec ullamcorper justo diam molestie lectus. Nam vitae nisl ut quam dignissim facilisis id sed eros.</p>
+        </div>
+      </div> <!-- /person -->
+    <% end %>
+  </div>
 </section> <!-- /people-section -->
 <% end %>

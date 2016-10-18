@@ -170,6 +170,7 @@
     @extend %group;
   }
 
+  a,
   span {
     color: $gray-dark;
   }
@@ -180,11 +181,18 @@
 
   .taproom-hours,
   .cafe-hours {
-    @include span-columns(6);
+    @include span-columns(4.5);
   }
 
   .cafe-hours {
     text-align: right;
+  }
+
+  .social {
+    @include span-columns(3);
+    @include omega();
+    text-align: right;
+    font-size: calc-em(16px, 10px);
   }
 }
 
