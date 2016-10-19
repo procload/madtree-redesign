@@ -44,16 +44,21 @@ body.home {
   .ctas {
     margin-bottom: calc-em(60px);
     overflow: hidden;
-
-    @include display(flex);
-
+    @include respond-to(40em) {
+      @include display(flex);
+    }
   }
 
   .cta {
-    width: 33.3333%;
-    border-right: 1px solid $gray-lighter;
     text-align: center;
     padding: calc-em(10px) 2%;
+    border-bottom: 1px solid $gray-lighter;
+
+    @include respond-to(40em) {
+      width: 33.3333%;
+      border: none;
+      border-right: 1px solid $gray-lighter;
+    }
 
     h3 {
       margin-bottom: calc-em(8px, 20px);
@@ -103,8 +108,10 @@ body.home {
     } // .visit
 
     &:first-child {
-      padding-bottom: 9999px;
-      margin-bottom: -9999px;
+      @include respond-to(40em) {
+        padding-bottom: 9999px;
+        margin-bottom: -9999px;
+      }
     }
 
     &:last-child {
