@@ -51,8 +51,15 @@
 //   Modules
 // -------------------------------------
 
+@import "modules/beer-info-table";
+@import "modules/beer-summary";
 @import "modules/button";
+@import "modules/filter-tag";
 @import "modules/header";
+@import "modules/on-tap-beer";
+@import "modules/page-hero";
+@import "modules/product-preview";
+@import "modules/toolbar";
 
 // -------------------------------------
 //   Pages
@@ -99,30 +106,11 @@
   }
 }
 
-// -------------------------------------
-//   Product Previews
-// -------------------------------------
-
-.product-preview {
-  margin-bottom: calc-em(16px);
-
-  a {
-    display: block;
-    text-align: center;
-  }
-
-  a p {
-    color: $gray;
-    margin-bottom: 0;
-  }
-}
 
 
 // -------------------------------------
 //   Slick Overrides
 // -------------------------------------
-
-
 .slick-next,
 .slick-prev {
   z-index: 1000;
@@ -133,7 +121,6 @@
     font-size: 30px;
   }
 }
-
 
 // -------------------------------------
 //   Navlist
@@ -151,188 +138,6 @@
   .street {
     font-weight: bold;
     display: block;
-  }
-}
-
-
-// -------------------------------------
-//   Toolbar
-// -------------------------------------
-.toolbar {
-  background: $gray-lightest;
-  font-size: calc-em(10px);
-  line-height: calc-em(30px, 10px);
-
-  .container {
-    @extend %group;
-  }
-
-  a,
-  span {
-    color: $gray-dark;
-  }
-
-  strong {
-    text-transform: uppercase;
-  }
-
-  .taproom-hours,
-  .cafe-hours {
-    @include span-columns(4.5);
-  }
-
-  .cafe-hours {
-    text-align: right;
-  }
-
-  .social {
-    @include span-columns(3);
-    @include omega();
-    text-align: right;
-    font-size: calc-em(16px, 10px);
-  }
-}
-
-// -------------------------------------
-//   Beer Info Table
-// -------------------------------------
-
-.beer-info-table {
-  text-align: left;
-  color: $gray-light;
-  width: 100%;
-
-  th {
-    font-family: $font-family-headings;
-    text-transform: uppercase;
-  }
-
-  td {
-    font-size: calc-em(19px);
-  }
-
-}
-
-// -------------------------------------
-//   Beer Summary
-// -------------------------------------
-
-.beer-summary {
-
-  h4 a {
-    color: $gray-dark;
-  }
-
-
-  &.small {
-    @extend %group;
-
-    .beer-summary-image {
-      float: left;
-      width: 40%;
-      display: block;
-    }
-
-    h4,
-    .beer-info-table {
-      float: right;
-      width: 55%;
-
-      th {
-        font-size: calc-em(12px);
-      }
-
-      td {
-        font-size: calc-em(14px);
-      }
-    }
-  }
-
-
-}
-
-// -------------------------------------
-//   Page Hero
-// -------------------------------------
-
-.page-hero {
-  text-align: center;
-  margin-bottom: calc-em(48px);
-
-  h2 {
-    font-size: calc-em(48px);
-  }
-
-  p {
-    font-weight: 100;
-    font-size: calc-em(21px);
-    padding: 0 5%;
-    color: $gray;
-
-    a {
-      font-weight: 600;
-    }
-  }
-}// .page-hero
-
-
-// -------------------------------------
-//   On Tap Beer
-// -------------------------------------
-.on-tap-beer {
-  width: 20%;
-  margin-bottom: calc-em(30px);
-
-  h4 {
-    font-weight: 600;
-
-    a {
-      color: $gray-dark;
-    }
-  }
-
-  p {
-    margin-bottom: 0;
-  }
-
-  .style,
-  .abv,
-  .ibu {
-    font-size: calc-em(12px);
-    line-height: calc-em(12px, 12px);
-    color: $gray;
-  }
-}
-
-// -------------------------------------
-//   Filter/Tag
-// -------------------------------------
-
-.filter,
-.tag {
-  display: inline-block;
-  border-radius: 4px;
-  background: $gray-lightest;
-  text-transform: uppercase;
-  color: $gray;
-  font-weight: bold;
-  padding: calc-em(4px, 12px) calc-em(12px, 12px);
-  font-size: calc-em(12px);
-  line-height: calc-em(16px, 12px);
-
-  &:hover {
-    background: $gray-lighter;
-    color: $white;
-  }
-
-  &.active {
-    background: $brand-primary;
-    color: $white;
-
-    &:hover {
-      background: lighten($brand-primary, 5%);
-      color: $white;
-    }
   }
 }
 
@@ -429,7 +234,18 @@
   }
 
   .nav-group {
-    @include span-columns(3);
+    margin-bottom: calc-em(16px);
+
+    @include respond-to(23.75em) {
+      @include span-columns(6);
+      @include omega(2n);
+    }
+
+    @include respond-to(40em) {
+      @include omega-reset(2n);
+      @include span-columns(3);
+      @include omega(4n);
+    }
 
     li {
       display: block;
@@ -451,13 +267,17 @@
 
   .footer-hours,
   .footer-contact {
-    @include span-columns(4);
+    @include respond-to(26.875em) {
+      @include span-columns(4);
+    }
   }
 
   .footer-address,
   .footer-social {
-    @include span-columns(4);
-    @include shift(3);
+    @include respond-to(26.875em) {
+      @include span-columns(4);
+      @include shift(3);
+    }
   }
 
   .footer-hours,

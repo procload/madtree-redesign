@@ -1,0 +1,17 @@
+// -------------------------------------
+//   Product Previews
+// -------------------------------------
+
+.product-preview {
+  margin-bottom: calc-em(16px);
+
+  a {
+    display: block;
+    text-align: center;
+  }
+
+  a p {
+    color: $gray;
+    margin-bottom: 0;
+  }
+}

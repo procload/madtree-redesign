@@ -1,0 +1,28 @@
+// -------------------------------------
+//   On Tap Beer
+// -------------------------------------
+.on-tap-beer {
+  width: 20%;
+  margin-bottom: calc-em(30px);
+
+  h4 {
+    font-weight: 600;
+
+    a {
+      color: $gray-dark;
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  .style,
+  .abv,
+  .ibu {
+    font-size: calc-em(12px);
+    line-height: calc-em(12px, 12px);
+    color: $gray;
+  }
+}
+

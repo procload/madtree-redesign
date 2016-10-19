@@ -1,0 +1,35 @@
+// -------------------------------------
+//   Beer Summary
+// -------------------------------------
+
+.beer-summary {
+
+  h4 a {
+    color: $gray-dark;
+  }
+
+
+  &.small {
+    @extend %group;
+
+    .beer-summary-image {
+      float: left;
+      width: 40%;
+      display: block;
+    }
+
+    h4,
+    .beer-info-table {
+      float: right;
+      width: 55%;
+
+      th {
+        font-size: calc-em(12px);
+      }
+
+      td {
+        font-size: calc-em(14px);
+      }
+    }
+  }
+}

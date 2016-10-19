@@ -1,0 +1,31 @@
+// -------------------------------------
+//   Filter/Tag
+// -------------------------------------
+
+.filter,
+.tag {
+  display: inline-block;
+  border-radius: 4px;
+  background: $gray-lightest;
+  text-transform: uppercase;
+  color: $gray;
+  font-weight: bold;
+  padding: calc-em(4px, 12px) calc-em(12px, 12px);
+  font-size: calc-em(12px);
+  line-height: calc-em(16px, 12px);
+
+  &:hover {
+    background: $gray-lighter;
+    color: $white;
+  }
+
+  &.active {
+    background: $brand-primary;
+    color: $white;
+
+    &:hover {
+      background: lighten($brand-primary, 5%);
+      color: $white;
+    }
+  }
+}
