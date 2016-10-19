@@ -26,7 +26,11 @@ body.beer-index {
     }
 
     .beer-preview {
-      width: 25%;
+      width: 47.5%;
+
+      @include respond-to(27.5em) {
+        width: 23%;
+      }
       margin-bottom: calc-em(32px);
     }
   }
@@ -39,7 +43,17 @@ body.beer-index {
     }
 
     .beer-preview {
-      width: 10%;
+      padding: 0 calc-em(10px);
+      width: 33.333%;
+
+      @include respond-to(33.75em) {
+        width: 20%;
+      }
+
+      @include respond-to(50em) {
+        padding: 0;
+        width: 10%;
+      }
     }
 
   }// .browse-beers
