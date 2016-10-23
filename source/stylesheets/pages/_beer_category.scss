@@ -1,9 +1,12 @@
 body.beer-category {
 
   .beer-summary {
-    @include span-columns(6);
-    @include omega(2n);
     margin-bottom: calc-em(32px);
+
+    @include respond-to(48.75em) {
+      @include span-columns(6);
+      @include omega(2n);
+    }
   }
 
   .beer-summary-image {
