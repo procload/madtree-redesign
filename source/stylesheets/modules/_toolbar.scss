@@ -3,12 +3,18 @@
 // -------------------------------------
 .toolbar {
   background: $gray-lightest;
-  font-size: calc-em(10px);
-  line-height: calc-em(30px, 10px);
+  font-size: calc-em(8px);
+  line-height: calc-em(30px, 8px);
+
+  @include respond-to(22.5em) {
+    font-size: calc-em(10px);
+  }
 
   .container {
     @extend %group;
   }
+
+
 
   a,
   span {
@@ -19,19 +25,45 @@
     text-transform: uppercase;
   }
 
-  .taproom-hours,
-  .cafe-hours {
-    @include span-columns(4.5);
+  .taproom-hours {
+
+    > strong {
+      display: none;
+      @include respond-to(25.625em) {
+        display: inline;
+      }
+    }
+
+    @include respond-to(35em) {
+      @include span-columns(9);
+    }
+
+    @include respond-to(70em) {
+      @include span-columns(4.5);
+    }
   }
 
+
   .cafe-hours {
+    display: none;
     text-align: right;
+
+    @include respond-to(70em) {
+      @include span-columns(4.5);
+      display: block;
+
+    }
   }
 
   .social {
-    @include span-columns(3);
-    @include omega();
+    display: none;
     text-align: right;
     font-size: calc-em(16px, 10px);
+
+    @include respond-to(35em) {
+      display: block;
+      @include span-columns(3);
+      @include omega();
+    }
   }
 }
