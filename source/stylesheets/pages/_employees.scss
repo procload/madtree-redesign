@@ -8,9 +8,18 @@ body.employees {
     @extend %zero-list;
     @include display(flex);
     @include justify-content(space-around);
+    @include flex-wrap(wrap);
     font-family: $font-family-headings;
     text-transform: uppercase;
-    font-size: calc-em(24px);
+    font-size: calc-em(18px);
+
+    @include respond-to(30em) {
+      font-size: calc-em(24px);
+    }
+
+    li {
+      margin: 0 2%;
+    }
   }
 
   .people-section {
@@ -26,9 +35,12 @@ body.employees {
 
   .person {
     @extend %group;
-    @include span-columns(6);
-    @include omega(2n);
     margin-bottom: calc-em(36px);
+
+    @include respond-to(45em) {
+      @include span-columns(6);
+      @include omega(2n);
+    }
 
     .person-image {
       @include span-columns(2 of 6);
