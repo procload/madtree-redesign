@@ -9,9 +9,10 @@ body.assets {
     margin-bottom: calc-em(64px);
 
     .logo {
-      @include span-columns(4);
       display: block;
-
+      @include respond-to(31.25em) {
+        @include span-columns(4);
+      }
     }
   }
 
@@ -20,10 +21,17 @@ body.assets {
     margin-bottom: calc-em(64px);
 
     .press-photo {
-      @include span-columns(2);
-      @include omega(7n);
       display: block;
       margin-bottom: calc-em(16px);
+      @include span-columns(3);
+      @include omega(5n);
+
+      @include respond-to(31.25em) {
+        @include omega-reset(5n);
+        @include span-columns(2);
+        @include omega(7n);
+
+      }
     }
   }
 
@@ -37,16 +45,22 @@ body.assets {
   }
 
   .asset-search {
-    @include span-columns(3);
+    @include respond-to(48.75em) {
+      @include span-columns(3);
+    }
   }
 
   .asset-group {
-    @include span-columns(9);
     @include omega();
+    @extend %group;
     padding: calc-em(10px) calc-em(20px);
     background: $gray-lightest;
     border-radius: 4px;
     border: 1px solid $gray-lighter;
+
+    @include respond-to(48.75em) {
+      @include span-columns(9);
+    }
 
     .asset {
       @include span-columns(3 of 9);
