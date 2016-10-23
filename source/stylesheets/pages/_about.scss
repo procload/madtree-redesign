@@ -8,18 +8,6 @@ body.about {
     position: relative;
     margin-bottom: calc-em(64px);
 
-    hr {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      width: 2px;
-      border: none;
-      background: $gray-light;
-      left: 50%;
-      height: 100%;
-      margin: 0;
-    }
-
     ul {
       margin: 0;
       padding: 0;
@@ -28,10 +16,14 @@ body.about {
     ul li {
       list-style-type: none;
       position: relative;
-      width: 6px;
-      margin: 0 auto;
-      padding-top: 50px;
-      background: $gray-lighter;
+      margin-bottom: calc-em(16px);
+
+      @include respond-to(57.5em) {
+        width: 6px;
+        margin: 0 auto;
+        padding-top: 50px;
+        background: $gray-lighter;
+      }
 
       &:after {
         content: '';
@@ -43,25 +35,49 @@ body.about {
         height: 15px;
         border-radius: 50%;
         background: $gray;
+        display: none;
+
+        @include respond-to(57.5em) {
+          display: block;
+        }
       }
 
       &:nth-child(odd) .timeline-entry {
-        left: 45px;
+        left: auto;
+
+        @include respond-to(57.5em) {
+          left: 45px;
+        }
 
         &:before {
+          display: none;
           left: -16px;
           border-width: 8px 16px 8px 0;
           border-color: transparent $gray-lighter transparent transparent;
+
+          @include respond-to(57.5em) {
+            display: block;
+          }
+
         }
       }
 
       &:nth-child(even) .timeline-entry {
-        left: -439px;
+        left: auto;
+
+        @include respond-to(57.5em) {
+          left: -439px;
+        }
 
         &:before {
+          display: none;
           right: -16px;
           border-width: 8px 0 8px 16px;
           border-color: transparent transparent transparent $gray-lighter;
+
+          @include respond-to(57.5em) {
+            display: block;
+          }
         }
       }
     }
@@ -71,17 +87,26 @@ body.about {
     position: relative;
     bottom: 0;
     padding: calc-em(10px);
-    width: 400px;
     border: 2px solid $gray-lighter;
     border-radius: 4px;
 
+    @include respond-to(57.5em) {
+      width: 400px;
+    }
+
     &:before {
+      display: none;
       content: '';
       position: absolute;
       bottom: 7px;
       width: 0;
       height: 0;
       border-style: solid;
+
+      @include respond-to(57.5em) {
+        display: block;
+      }
+
     }
   }
 }
