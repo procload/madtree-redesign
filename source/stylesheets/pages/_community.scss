@@ -7,9 +7,16 @@ body.community {
     text-align: center;
 
     .partner {
-      width: 33.333333%;
-      padding: 0 2%;
       margin-bottom: calc-em(48px);
+
+      @include respond-to(36.25em) {
+        width: 50%;
+        padding: 0 2%;
+      }
+
+      @include respond-to(46.25em) {
+        width: 33.333333%;
+      }
 
       h3 {
         font-size: calc-em(28px);
@@ -19,6 +26,8 @@ body.community {
         font-size: calc-em(18px);
       }
     }
+
+
   }
 
   .current-month-partner,
@@ -53,12 +62,22 @@ body.community {
 
     .partners {
       @include display(flex);
+      @include flex-wrap(wrap);
       @include justify-content(space-between);
     }
 
     .partner {
       text-align: center;
-      width: 8%;
+      width: 47.5%;
+      margin-bottom: calc-em(24px);
+
+      @include respond-to(26.25em) {
+        width: 18%;
+      }
+
+      @include respond-to(60em) {
+        width: 8%;
+      }
     }
   }
 
