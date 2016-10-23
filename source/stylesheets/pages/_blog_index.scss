@@ -4,12 +4,16 @@ body.blog-index {
       font-size: calc-em(36px);
       margin-bottom: calc-em(18px, 36px);
     }
-    @include span-columns(7);
+    @include respond-to(40em) {
+      @include span-columns(7);
+    }
   }
 
   .blog-meta {
-    @include span-columns(4);
-    @include shift(1);
+    @include respond-to(40em) {
+      @include span-columns(4);
+      @include shift(1);
+    }
   }
 
   .post {
