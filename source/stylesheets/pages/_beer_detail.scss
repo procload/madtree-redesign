@@ -9,7 +9,10 @@ body.beer-detail {
   }// .beer-info
 
   .beer-description {
-    @include span-columns(7);
+
+    @include respond-to(28.75em) {
+      @include span-columns(7);
+    }
 
     h2 {
       margin-bottom: 0;
@@ -21,14 +24,35 @@ body.beer-detail {
   }
 
   .related-merch {
-    @include span-columns(6);
+    margin-bottom: calc-em(24px);
+
+    @include respond-to(40em) {
+      @include span-columns(6);
+    }
   }
 
-  .beer-image,
+  .beer-image {
+
+    @include respond-to(28.75em) {
+      @include span-columns(5);
+      @include omega();
+      float: right;
+
+    }
+
+    img {
+      @include respond-to(28.75em) {
+        max-width: calc-em(305px);
+      }
+    }
+  }
+
   .related-beers {
-    @include span-columns(5);
-    @include omega();
-    float: right;
+    @include respond-to(40em) {
+      @include span-columns(5);
+      @include omega();
+      float: right;
+    }
   }
 
   .beer-description {
