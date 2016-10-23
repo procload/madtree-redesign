@@ -1,5 +1,7 @@
 body.blog-index {
   .blog-posts {
+    margin-bottom: calc-em(64px);
+
     h2 {
       font-size: calc-em(36px);
       margin-bottom: calc-em(18px, 36px);
@@ -10,6 +12,8 @@ body.blog-index {
   }
 
   .blog-meta {
+    margin-bottom: calc-em(64px);
+
     @include respond-to(40em) {
       @include span-columns(4);
       @include shift(1);

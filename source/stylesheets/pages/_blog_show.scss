@@ -1,8 +1,11 @@
 body.blog-show {
 
   .main-content {
-    @include pad(0 ($column * 2));
     margin-bottom: calc-em(64px);
+
+    @include respond-to(60em) {
+      @include pad(0 ($column * 2));
+    }
   }
 
   .post-header {
