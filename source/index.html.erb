@@ -26,60 +26,77 @@ description: ""
 </section> <!-- /slideshow -->
 
 
+
 <section class="ctas">
-  <div class="cta where">
-    <h3>Where to Get Madtree</h3>
-    <a href="#" class="btn btn-primary">Open Beer Finder</a>
-    <p>Phasellus dapibus ipsum a volutpat. Ut mollis consequat ultricies.</p>
 
+    <div class="cta where">
+      <h3>Where to Get Madtree</h3>
+      <p>Enter your zip code or address</p>
 
-    <div class="beer-form-container">
-      <div id="bh-sl-map-container" class="bh-sl-map-container">
-        <div id="beer-map" class="bh-sl-map"></div>
-        <div class="loc-list">
-          <ul class="list"></ul>
+      <div class="beer-form-container">
+        <div id="bh-sl-map-container" class="beer-map-container">
         </div>
+
+        <form id="beer-finder-form" method="post" action="#">
+          <div class="input-group">
+            <input type="text" class="form-control" id="bh-sl-address" name="bh-sl-address" placeholder="Search for...">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="submit">Find Beer</button>
+            </span>
+          </div><!-- /input-group -->
+        </form>
+
+      </div>
+    </div>
+
+    <div class="cta visit">
+      <h3>Visit Our Taproom</h3>
+      <div class="address">
+        <h5><i class="fa fa-map-marker"></i> Address</h5>
+        <span class="street">5164 Kennedy Ave.</span>
+        <span class="city">Cincinnati, OH 45208</span>
       </div>
 
-      <form id="beer-finder-form" method="post" action="#">
+      <div class="phone">
+        <h5><i class="fa fa-phone"></i> Phone</h5>
+        <p itemprop="telephone"><a href="tel:+5555555555">555-555-5555</a></p>
+      </div>
+    </div>
+
+    <div class="cta sign-up">
+      <h3>Sign up for our Newsletter</h3>
+      <form class="email-signup">
         <div class="input-group">
-          <input type="text" class="form-control" id="bh-sl-address" name="bh-sl-address" placeholder="Search for...">
+          <input type="text" class="form-control" placeholder="Search for...">
           <span class="input-group-btn">
-            <button class="btn btn-default" type="submit">Find Beer</button>
+            <button class="btn btn-default" type="button">Go!</button>
           </span>
         </div><!-- /input-group -->
       </form>
+      <p>Phasellus dapibus ipsum a volutpat. Ut mollis consequat ultricies.</p>
     </div>
-
-
-  </div>
-
-  <div class="cta visit">
-    <h3>Visit Our Taproom</h3>
-    <div class="address">
-      <h5><i class="fa fa-map-marker"></i> Address</h5>
-      <span class="street">5164 Kennedy Ave.</span>
-      <span class="city">Cincinnati, OH 45208</span>
-    </div>
-
-    <div class="phone">
-      <h5><i class="fa fa-phone"></i> Phone</h5>
-      <p itemprop="telephone"><a href="tel:+5555555555">555-555-5555</a></p>
-    </div>
-  </div>
-
-  <div class="cta sign-up">
-    <h3>Sign up for our Newsletter</h3>
-    <form class="email-signup">
-      <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search for...">
-        <span class="input-group-btn">
-          <button class="btn btn-default" type="button">Go!</button>
-        </span>
-      </div><!-- /input-group -->
-    </form>
-    <p>Phasellus dapibus ipsum a volutpat. Ut mollis consequat ultricies.</p>
-  </div>
 </section>
+
+<div class="modal fade" id="beerModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <div class="beer-finder-results">
+          <div id="beer-map" class="bh-sl-map"></div>
+          <div class="loc-list">
+            <ul class="list"></ul>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
 <%= partial "partials/on-tap" %>

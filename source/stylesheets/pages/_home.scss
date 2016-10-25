@@ -50,10 +50,14 @@ body.home {
   // -------------------------------------
   .ctas {
     margin-bottom: calc-em(60px);
-    overflow: hidden;
+    position: relative;
+
     @include respond-to(40em) {
       @include display(flex);
     }
+  }
+
+  .cta-group {
   }
 
   .cta {
@@ -78,6 +82,9 @@ body.home {
     }
 
     &.where {
+
+      position: relative;
+
       .btn {
         margin-bottom: calc-em(16px);
       }
@@ -113,13 +120,6 @@ body.home {
       }
 
     } // .visit
-
-    &:first-child {
-      @include respond-to(40em) {
-        padding-bottom: 9999px;
-        margin-bottom: -9999px;
-      }
-    }
 
     &:last-child {
       border: none;
@@ -207,4 +207,41 @@ body.home {
       right: -20px;
     }
   }
+
+  .beer-map-container {
+    position: relative;
+    background: #FFF;
+    margin-top: -50px;
+    width: 100%;
+    z-index: 1000;
+
+  }
 }
+
+.beer-finder-results {
+  max-height: 600px;
+  overflow: hidden;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    .bh-sl-map {
+      height: calc-em(240px);
+    }
+
+  .loc-list {
+    overflow: scroll;
+    height: 360px;
+  }
+}
+
+
+
+
+.modal-body {
+  height: 600px;
+}
+

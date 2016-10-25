@@ -114,10 +114,14 @@ $(document).ready(function() {
             'listTemplatePath'         : '/templates/location-list-description.html',
             'KMLinfowindowTemplatePath': '/templates/kml-infowindow-description.html',
             'KMLlistTemplatePath'      : '/templates/kml-location-list-description.html',
+            callbackMapSet: function() {
+                $("#beerModal").modal('show');
+            }
         }
         );
     });
 
-    
-
+    $("#beerModal").on("shown.bs.modal", function () {
+        google.maps.event.trigger("", "resize");
+    });
 });
