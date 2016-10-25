@@ -37,6 +37,10 @@
 // ----- Neat ----- //
 @import "neat";
 
+// ----- Store Locator ----- //
+@import "libs/store-locator/storelocator";
+
+
 // -------------------------------------
 //   Core
 // -------------------------------------
@@ -264,3 +268,46 @@
     clear: both;
   }
 }// .site-footer-
+
+
+
+
+#loc-list {
+  max-height: calc-em(560px);
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+.loc-list {
+  ul {
+    @extend %zero-list;
+
+    li {
+      @extend %group;
+      display: block;
+      padding: calc-em(12px);
+    }
+  }
+
+
+  .list-label {
+    font-family: $font-family-headings;
+    background: $brand-primary;
+    color: $white;
+    display: block;
+    float: left;
+    padding: calc-em(3px);
+    font-size: calc-em(23px);
+    width: calc-em(32px, 23px);
+    height: calc-em(32px, 23px);
+    line-height: calc-em(29px, 23px);
+    margin-right: calc-em(10px, 23px);
+  }
+
+  .list-details {
+    float: left;
+    font-size: calc-em(14px);
+  }
+}
+

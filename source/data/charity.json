@@ -1,0 +1,159 @@
+[
+  {
+    "name": "Cincinnati Community ToolBank",
+    "image": "\/images\/charity\/img-toolbank.jpg",
+    "url": "http:\/\/cincinnatitoolbank.org\/",
+    "money": "",
+    "description": "The Cincinnati Community ToolBank is a nonprofit tool lending program that provides fellow not-for-profit organizations with year-round access to an inventory of tools for use in volunteer projects and for facility and grounds maintenance. We provide tools to enhance the charitable sector\u2019s capacity to serve, facilitating hands-on volunteerism in the greater Cincinnati area.",
+    "type": "core"
+  },
+  {
+    "name": "CityLink Center",
+    "image": "\/images\/charity\/img-citylink.jpg",
+    "url": "http:\/\/citylinkcenter.org\/",
+    "money": "",
+    "description": "CityLink is a city-wide initiative started by a group of social service agencies who recognized the need for integrated services. CityLink leverages the strengths of various social service agencies in Cincinnati and\u00a0continues to build support from a broad base of faith-based, corporate, foundation and individual supporters.",
+    "type": "core"
+  },
+  {
+    "name": "Green Umbrella",
+    "image": "\/images\/charity\/img-greenumbrella.jpg",
+    "url": "http:\/\/www.greenumbrella.org",
+    "money": "",
+    "description": "The Green Umbrella is a non-profit organization working to improve the economic vitality and quality of life in the region around Cincinnati by maximizing the collective impact of individuals and organizations dedicated to environmental sustainability. Green Umbrella facilitates collaboration among over 200 area non-profits, businesses, educational institutions and governmental entities focused on the environmental aspects of sustainability.\u00a0 With our members, we aim to meet the environmental, social, and economic needs of today while preserving the ability of future generations to do the same.",
+    "type": "core"
+  },
+  {
+    "name": "Starfire",
+    "image": "\/images\/charity\/img-starfire.jpg",
+    "url": "http:\/\/www.starfirecouncil.org\/#&panel1-1",
+    "money": "",
+    "description": "Starfire is focused on decreasing the social isolation felt by people with disabilities, by helping people with disabilities and their families connect to a network of friends, neighbors, and others in their community. Working with one person at a time, we believe we can decrease people's sense of loneliness, and work toward a good life. Starfire is a conduit to relationships. So whether you are a person with a disability, a family member, or a community member looking to get involved, we will help you connect to people who you share things in common with.",
+    "type": "core"
+  },
+  {
+    "monthly_partners": [
+      {
+        "name": "Pleasant Ridge Montessori Boosters",
+        "image": "\/images\/charity\/img-prm.png",
+        "url": "",
+        "money": "",
+        "description": "",
+        "type": "monthly",
+        "month": "January",
+        "month_number": 0
+      },
+      {
+        "name": "Pro-Kids",
+        "image": "\/images\/charity\/img-pkyp.png",
+        "url": "",
+        "money": "",
+        "description": "",
+        "type": "monthly",
+        "month": "February",
+        "month_number": 1
+      },
+      {
+        "name": "Keep Cincinnati Beautiful",
+        "image": "\/images\/charity\/img-cincyb.png",
+        "url": "",
+        "money": "",
+        "description": "",
+        "type": "monthly",
+        "month": "March",
+        "month_number": 2
+      },
+      {
+        "name": "Joe Nuxhall Foundation",
+        "image": "\/images\/charity\/img-nuxhall.png",
+        "url": "",
+        "money": "",
+        "description": "",
+        "type": "monthly",
+        "month": "April",
+        "month_number": 3
+      },
+      {
+        "name": "Chefs Collaborative",
+        "image": "\/images\/charity\/img-chefs.png",
+        "url": "",
+        "money": "",
+        "description": "",
+        "type": "monthly",
+        "month": "May",
+        "month_number": 4
+      },
+      {
+        "name": "Tr-State Bleeding Disorders",
+        "image": "\/images\/charity\/img-bleeding.png",
+        "url": "",
+        "money": "",
+        "description": "",
+        "type": "monthly",
+        "month": "June",
+        "month_number": 5
+      },
+      {
+        "name": "Greater Cincinnati Behavioral Health",
+        "image": "\/images\/charity\/img-gcbhs.png",
+        "url": "",
+        "money": "",
+        "description": "",
+        "type": "monthly",
+        "month": "July",
+        "month_number": 6
+      },
+      {
+        "name": "Community Matters",
+        "image": "\/images\/charity\/img-community.png",
+        "url": "",
+        "money": "",
+        "description": "",
+        "type": "monthly",
+        "month": "August",
+        "month_number": 7
+      },
+      {
+        "name": "Alzheimer's Association",
+        "image": "\/images\/charity\/img-alz.png",
+        "url": "",
+        "money": "",
+        "description": "",
+        "type": "monthly",
+        "month": "September",
+        "month_number": 8
+      },
+      {
+        "name": "Ohio Alley Cat Rescue",
+        "image": "\/images\/charity\/img-oar.png",
+        "url": "",
+        "money": "",
+        "description": "",
+        "type": "monthly",
+        "month": "October",
+        "month_number": 9
+      },
+      {
+        "name": "Boys Hope Girls Hope",
+        "image": "\/images\/charity\/img-bghope.png",
+        "url": "",
+        "money": "",
+        "description": "",
+        "type": "monthly",
+        "month": "November",
+        "month_number": 10
+      },
+      {
+        "name": "Fill the Truck",
+        "image": "\/images\/charity\/img-truck.png",
+        "url": "",
+        "money": "",
+        "description": "",
+        "type": "monthly",
+        "month": "December",
+        "month_number": 11
+      }
+    ]
+  }
+]
+

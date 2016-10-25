@@ -48,4 +48,76 @@ $(document).ready(function() {
     $('[data-toggle="popover"]').popover()
 
 
+    var activeGroup, copiedNav, error_callback, latitude, longitude, reverseGeocode, success_callback;
+
+    // $("#map-canvas").storeLocator({
+    //     dataType: "json",
+    //     dataLocation: "/data/stores.json",
+    //     callbackSuccess: function() {
+    //         return $(".find-beer").addClass("showing-results");
+    //     }
+    // });
+
+    reverseGeocode = function(lat, long) {
+        var geocoder, latlng;
+        geocoder = new google.maps.Geocoder();
+        latlng = new google.maps.LatLng(lat, long);
+        return geocoder.geocode({
+            latLng: latlng
+        }, function(results, status) {
+            if (status === google.maps.GeocoderStatus.OK) {
+                if (results[1]) {
+                    return $("#address").val(results[0].formatted_address);
+                } else {
+
+                }
+            } else {
+
+            }
+        });
+    };
+
+    latitude = 0;
+
+    longitude = 0;
+
+    success_callback = function(p) {
+        latitude = p.coords.latitude;
+        longitude = p.coords.longitude;
+        return reverseGeocode(latitude, longitude);
+    };
+
+    error_callback = function(p) {};
+
+    $("#find").click(function(e) {
+        e.preventDefault();
+        if (geoPosition.init()) {
+            return geoPosition.getCurrentPosition(success_callback, error_callback, {
+                enableHighAccuracy: true
+            });
+        } else {
+
+        }
+    });
+
+
+    $(function() {
+        $('#bh-sl-map-container').storeLocator(
+            {
+            'dataType': "json",
+            'formContainer' : 'beer-form-container',
+            'locationList' : 'loc-list',
+            'mapID' : 'beer-map',
+            'formID' : 'beer-finder-form',
+            'dataLocation': "/data/stores.json",
+            'infowindowTemplatePath'   : '/templates/infowindow-description.html',
+            'listTemplatePath'         : '/templates/location-list-description.html',
+            'KMLinfowindowTemplatePath': '/templates/kml-infowindow-description.html',
+            'KMLlistTemplatePath'      : '/templates/kml-location-list-description.html',
+        }
+        );
+    });
+
+    
+
 });
