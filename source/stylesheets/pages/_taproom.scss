@@ -11,8 +11,11 @@ body.taproom {
     p {
       font-size: calc-em(21px);
       font-weight: 100;
-      width: 80%;
       margin: 0 auto;
+
+      @include respond-to(42.5em) {
+        width: 80%;
+      }
     }
   }
 
@@ -40,10 +43,16 @@ body.taproom {
 
   .days {
     @include display(flex);
+    @include flex-wrap(wrap);
     @include justify-content(space-around);
 
     .day {
-      width: 16.66667%;
+      width: 28%;
+      margin-bottom: calc-em(12px);
+
+      @include respond-to(40em) {
+        width: 16.66667%;
+      }
     }
 
     .hours {
@@ -55,9 +64,14 @@ body.taproom {
   .private-events,
   .food {
     text-align: center;
-    @include span-columns(6);
-    @include pad(0 default);
     margin-bottom: calc-em(64px);
+
+
+    @include respond-to(42.5em) {
+      @include span-columns(6);
+      @include pad(0 default);
+
+    }
 
     .section-header {
       margin-bottom: calc-em(32px);
@@ -88,13 +102,25 @@ body.taproom {
 
     .beers {
       @include display(flex);
-      @include justify-content(space-between);
+      @include justify-content(space-around);
       @include flex-wrap(wrap);
       text-align: center;
 
       a {
         display: block;
         color: $gray-dark;
+      }
+    }
+
+    .on-tap-beer {
+      width: 47.5%; 
+
+      @include respond-to(27.5em) {
+        width: 33%;
+      }
+
+      @include respond-to(42.5em) {
+        width: 20%;
       }
     }
   }
