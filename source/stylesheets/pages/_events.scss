@@ -2,24 +2,39 @@ body.events {
 
   .filters {
     @include display(flex);
+    @include flex-wrap(wrap);
     margin-bottom: calc-em(32px);
 
     .venue-filter {
       margin-right: calc-em(32px);
+      margin-bottom: calc-em(10px);
     }
 
-    .location-filter {
+    strong {
+      display: block;
+      font-size: calc-em(12px);
 
+      @include respond-to(26.25em) {
+        display: inline;
+        font-size: calc-em(14px);
+      }
     }
   }
 
   .event {
-    @include span-columns(6);
-    @include omega(2n);
     margin-bottom: calc-em(32px);
 
+    @include respond-to(37.5em) {
+      @include span-columns(6);
+      @include omega(2n);
+    }
+
     h3 {
-      font-size: calc-em(32px);
+      font-size: calc-em(24px);
+
+      @include respond-to(27.5em) {
+        font-size: calc-em(32px);
+      }
     }
 
     h6 {
@@ -27,7 +42,10 @@ body.events {
     }
 
     p {
-      font-size: calc-em(18px);
+
+      @include respond-to(27.5em) {
+        font-size: calc-em(18px);
+      }
     }
   }
 }
