@@ -45,6 +45,12 @@ body.assets {
   }
 
   .asset-search {
+    input {
+      background: #FFF;
+      border-radius: 4px;
+      width: 100%;
+    }
+
     @include respond-to(48.75em) {
       @include span-columns(3);
     }

@@ -124,4 +124,21 @@ $(document).ready(function() {
     $("#beerModal").on("shown.bs.modal", function () {
         google.maps.event.trigger("", "resize");
     });
+
+    var beers = ['Happy Amber', 'Psychopathy', 'Gnarly Brown', 'Blood Orange Psychopathy', 'Identity Crisis', 'Lift', 'PSA'];
+
+    var beers = new Bloodhound({
+        datumTokenizer: Bloodhound.tokenizers.whitespace,
+        queryTokenizer: Bloodhound.tokenizers.whitespace,
+        local: beers
+    });
+    $('#search-store').typeahead({
+        hint: true,
+        highlight: true,
+        minLength: 1
+    },
+    {
+        name: 'beers',
+        source: beers
+    });
 });
