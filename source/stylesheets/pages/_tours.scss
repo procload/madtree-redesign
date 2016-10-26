@@ -10,32 +10,52 @@ body.tours {
       }
 
       .page-hero-text {
-        @include span-columns(7);
+        margin-bottom: calc-em(24px);
+
+        @include respond-to(55em) {
+          @include span-columns(7);
+        }
       }
 
       .hero-image {
-        @include span-columns(5);
+        @include respond-to(55em) {
+          @include span-columns(5);
+        }
       }
     }
   }// .page-hero
 
   .tours {
-    @include span-columns(7);
+    margin-bottom: calc-em(24px);
+
+    @include respond-to(36.25em) {
+      @include span-columns(7);
+    }
 
     .taproom-photos {
       @include display(flex);
+      @include flex-wrap(wrap);
       @include justify-content(space-between);
-
     }
 
     .taproom-photo-thumb {
       display: block;
-      width: 10%;
+      width: 20%;
+      margin: 0 1%;
+      margin-bottom: calc-em(12px);
+
+      @include respond-to(720px) {
+        width: 10%;
+      }
     }
   }
 
   .private-events {
-    @include span-columns(5);
+
+    @include respond-to(36.25em) {
+      @include span-columns(5);
+    }
+
     text-align: left;
     padding: 0;
   }
