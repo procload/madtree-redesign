@@ -261,7 +261,14 @@ body.home {
 
 .modal-content {
   .modal-header {
-    text-align: right;
+    @extend %group;
+    h4 {
+      float: left;
+    }
+
+    > a {
+      float: right;
+    }
   }
 }
 
