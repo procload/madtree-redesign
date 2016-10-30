@@ -5,32 +5,75 @@ body.store-category {
   }
 
   .shop-sorting {
-    @include span-columns(3);
-    @include display(flex);
-    @include flex-wrap(wrap);
+    margin-bottom: calc-em(16px);
+
+    @include respond-to(38.75em) {
+      @include span-columns(3);
+      @include flex-wrap(wrap);
+    }
+
+    .sorts {
+      @include display(flex);
+      @include justify-content(space-between);
+
+      @include respond-to(38.75em) {
+        display: block;
+      }
+    }
+
   }
 
   .products {
-    @include span-columns(9);
-    @include omega();
     @extend %group;
 
+    @include respond-to(38.75em) {
+      @include span-columns(9);
+      @include omega();
+    }
+
     .product-preview {
-      @include span-columns(3 of 9);
-      @include omega(3n);
+      @include span-columns(6);
+      @include omega(2n);
+
+      @include respond-to(38.75em) {
+        @include omega-reset(2n);
+        @include span-columns(4.5 of 9);
+        @include omega(2n);
+      }
+
+      @include respond-to(42.5em) {
+        @include omega-reset(2n);
+        @include span-columns(3 of 9);
+        @include omega(3n);
+
+      }
     }
   }
 
   .sort {
     text-align: center;
-    padding: calc-em(16px, 18px);
-    margin-bottom: calc-em(8px, 18px);
     display: block;
-    width: 50%;
-    font-size: calc-em(18px);
     color: $gray-dark;
-    border-right: 1px solid $gray-lighter;
-    border-bottom: 1px solid $gray-lighter;
+    font-size: calc-em(11px);
+
+    @include respond-to(27.5em) {
+      font-size: calc-em(12px);
+    }
+
+    @include respond-to(38.75em) {
+      width: 100%;
+      font-size: calc-em(18px);
+      margin-bottom: calc-em(8px, 18px);
+    }
+
+    span {
+      display: block;
+      padding: calc-em(8px, 18px);
+      border-bottom: 1px solid $gray-lighter;
+      @include respond-to(27.5em) {
+        padding: calc-em(16px, 18px);
+      }
+    }
 
     &:nth-child(even) {
       border-right: none;
@@ -51,10 +94,24 @@ body.store-category {
     margin-bottom: calc-em(16px);
 
     strong {
-      font-size: calc-em(12px);
+      display: block;
+      font-size: calc-em(16px);
+      font-weight: 500;
+      font-family: $font-family-headings; 
+      text-transform: uppercase;
+
+      @include respond-to(38.75em) {
+        font-family: $font-family-sans-serif;
+        margin-right: calc-em(16px);
+        font-weight: bold;
+        text-transform: none;
+        display: inline;
+        font-size: calc-em(12px);
+      }
+
+
     }
 
-    strong,
     .filter {
       display: inline-block;
       margin-right: calc-em(16px);
