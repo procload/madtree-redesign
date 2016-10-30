@@ -49,7 +49,7 @@
     height: calc-em(60px);
     background: $white;
     border-bottom: 1px solid $gray;
-    z-index: 99999;
+    z-index: 1025;
 
     &.main {
       > .nav-list.open {

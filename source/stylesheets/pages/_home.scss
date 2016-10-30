@@ -88,6 +88,10 @@ body.home {
       .btn {
         margin-bottom: calc-em(16px);
       }
+      .input-group {
+        width: 80%;
+        margin: 0 auto calc-em(4px);
+      }
     }
 
     &.sign-up {
@@ -211,7 +215,6 @@ body.home {
   .beer-map-container {
     position: relative;
     background: #FFF;
-    margin-top: -50px;
     width: 100%;
     z-index: 1000;
 
@@ -238,8 +241,11 @@ body.home {
   }
 }
 
-
-
+.modal-content {
+  .modal-header {
+    text-align: right;
+  }
+}
 
 .modal-body {
   height: 600px;

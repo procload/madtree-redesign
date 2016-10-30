@@ -50,14 +50,6 @@ $(document).ready(function() {
 
     var activeGroup, copiedNav, error_callback, latitude, longitude, reverseGeocode, success_callback;
 
-    // $("#map-canvas").storeLocator({
-    //     dataType: "json",
-    //     dataLocation: "/data/stores.json",
-    //     callbackSuccess: function() {
-    //         return $(".find-beer").addClass("showing-results");
-    //     }
-    // });
-
     reverseGeocode = function(lat, long) {
         var geocoder, latlng;
         geocoder = new google.maps.Geocoder();
@@ -67,7 +59,7 @@ $(document).ready(function() {
         }, function(results, status) {
             if (status === google.maps.GeocoderStatus.OK) {
                 if (results[1]) {
-                    return $("#address").val(results[0].formatted_address);
+                    return $("#bh-sl-address").val(results[0].formatted_address);
                 } else {
 
                 }
@@ -89,7 +81,7 @@ $(document).ready(function() {
 
     error_callback = function(p) {};
 
-    $("#find").click(function(e) {
+    $(".locate").focus(function(e) {
         e.preventDefault();
         if (geoPosition.init()) {
             return geoPosition.getCurrentPosition(success_callback, error_callback, {
