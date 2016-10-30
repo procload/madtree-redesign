@@ -222,22 +222,40 @@ body.home {
 }
 
 .beer-finder-results {
-  max-height: 600px;
+  max-height: 360px;
   overflow: hidden;
+  z-index: 1000;
+  width: 100%;
 
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-    width: 100%;
-    .bh-sl-map {
+  @include respond-to(40em) {
+    max-height: 480px;
+  }
+
+  .bh-sl-map {
+    height: calc-em(160px);
+
+    @include respond-to(40em) {
       height: calc-em(240px);
     }
+  }
 
   .loc-list {
     overflow: scroll;
-    height: 360px;
+    height: 200px;
+    @include respond-to(40em) {
+      height: 260;
+    }
+  }
+}
+
+.beer-finder-results {
+  display: none;
+  padding-bottom: calc-em(16px);
+  margin-bottom: calc-em(16px);
+  border-bottom: 1px solid $gray-lighter;
+  
+  &.showing {
+    display: block;
   }
 }
 
@@ -247,7 +265,10 @@ body.home {
   }
 }
 
-.modal-body {
-  height: 600px;
-}
+#beer-finder-form {
+  text-align: center;
 
+  .input-group {
+    margin-bottom: calc-em(16px);
+  }
+}

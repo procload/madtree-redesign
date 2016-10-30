@@ -31,23 +31,11 @@ description: ""
 
     <div class="cta where">
       <h3>Where to Get Madtree</h3>
-      <p>Enter your zip code or address</p>
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#beerModal">
+        Find Madtree Beer 
+      </button>
 
-      <div class="beer-form-container">
-        <div id="bh-sl-map-container" class="beer-map-container">
-        </div>
 
-        <form id="beer-finder-form" method="post" action="#">
-          <div class="input-group">
-            <input type="text" class="form-control" id="bh-sl-address" name="bh-sl-address" placeholder="Search for...">
-            <span class="input-group-btn">
-              <button class="btn btn-default locate"><i class="fa fa-compass"></i></button>
-            </span>
-          </div><!-- /input-group -->
-          <button class="btn btn-default" type="submit">Find Beer</button>
-        </form>
-
-      </div>
     </div>
 
     <div class="cta visit">
@@ -85,11 +73,27 @@ description: ""
         <a href="#"  class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true"><i class="fa fa-close"></i></span></a>
       </div>
       <div class="modal-body">
-        <div class="beer-finder-results">
-          <div id="beer-map" class="bh-sl-map"></div>
-          <div class="loc-list">
-            <ul class="list"></ul>
+        <div class="beer-form-container">
+          <div id="bh-sl-map-container" class="beer-map-container">
           </div>
+          <div class="beer-finder-results" class>
+            <div id="beer-map" class="bh-sl-map"></div>
+            <div class="loc-list">
+              <ul class="list"></ul>
+            </div>
+          </div>
+
+          <form id="beer-finder-form" method="post" action="#">
+            <h3>Enter your address or hit the <i class="fa fa-compass"></i> icon to find your address</h3>
+            <div class="input-group">
+              <input type="text" class="form-control" id="bh-sl-address" name="bh-sl-address" placeholder="Search for...">
+              <span class="input-group-btn">
+                <button class="btn btn-default locate"><i class="fa fa-compass"></i></button>
+              </span>
+            </div><!-- /input-group -->
+            <button class="btn btn-default" type="submit">Find Beer</button>
+          </form>
+
         </div>
       </div>
       <div class="modal-footer">

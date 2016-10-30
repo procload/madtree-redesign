@@ -107,14 +107,10 @@ $(document).ready(function() {
             'KMLinfowindowTemplatePath': '/templates/kml-infowindow-description.html',
             'KMLlistTemplatePath'      : '/templates/kml-location-list-description.html',
             callbackMapSet: function() {
-                $("#beerModal").modal('show');
+                $('.beer-finder-results').addClass('showing');
             }
         }
         );
-    });
-
-    $("#beerModal").on("shown.bs.modal", function () {
-        google.maps.event.trigger("", "resize");
     });
 
     var beers = ['Happy Amber', 'Psychopathy', 'Gnarly Brown', 'Blood Orange Psychopathy', 'Identity Crisis', 'Lift', 'PSA'];
