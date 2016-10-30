@@ -28,6 +28,8 @@ body.store-index {
 
     .category-preview {
       text-align: center;
+      padding: 0 calc-em(12px);
+      margin-bottom: calc-em(18px);
 
       > a {
         display: block;
@@ -43,7 +45,11 @@ body.store-index {
     @extend %group;
 
     .collection-preview {
-      @include span-columns(4);
+      margin-bottom: calc-em(16px);
+
+      @include respond-to(33.75em) {
+        @include span-columns(4);
+      }
     }
   }
 
@@ -54,8 +60,20 @@ body.store-index {
   }
 
   .product-preview {
-    @include span-columns(3);
-    @include omega(4n);
+    @include span-columns(6);
+    @include omega(2n);
+
+    @include respond-to(27.5em) {
+      @include omega-reset(2n);
+      @include span-columns(4);
+      @include omega(3n);
+    }
+
+    @include respond-to(40em) {
+      @include omega-reset(3n);
+      @include span-columns(3);
+      @include omega(4n);
+    }
   }
 }// .store-index
 
