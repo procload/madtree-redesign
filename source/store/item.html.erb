@@ -7,7 +7,7 @@ store: true
 
 <section class="product-images">
   <div class="main-product-image">
-    <%= image_tag "http://placehold.it/540x511" %>
+    <%= image_tag "http://placehold.it/720x540" %>
   </div> <!-- /main-product-image -->
 
   <div class="product-image-thumbs">
@@ -68,13 +68,15 @@ store: true
 <section class="related-products">
   <h3>Related Products</h3>
 
-  <% 4.times do %>
-  <div class="product-preview">
-    <%= link_to image_tag("http://placehold.it/180x180"), "/store/item.html", class: "product-image" %>
-    <a href="/store/item.html" class="preview-description">
-      <p>Product Name</p>
-      <span class="price">$22</span>
-    </a>
+  <div class="products">
+    <% 4.times do %>
+      <div class="product-preview">
+        <%= link_to image_tag("http://placehold.it/180x180"), "/store/item.html", class: "product-image" %>
+        <a href="/store/item.html" class="preview-description">
+          <p>Product Name</p>
+          <span class="price">$22</span>
+        </a>
+      </div>
+    <% end %>
   </div>
-  <% end %>
 </section> <!-- /related-products -->
