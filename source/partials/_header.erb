@@ -15,7 +15,7 @@
       </ul> <!-- /nav-list -->
     </nav>
     <nav class="site-nav sub">
-      <% if current_page.data.sub_nav? %>
+      <% if current_page.data.sub_nav? && !current_page.data.store? %>
         <ul class="subnav nav-list" data-group="beers">
           <li class="active"><a href="/beer/beer.html">Happy Amber</a></li>
           <li><a href="/beer/beer.html">Lift</a></li>
@@ -25,7 +25,15 @@
           <li><a href="/beer/beer.html">Limited Draft</a></li>
           <li><a href="/beer/beer.html">Series</a></li>
           <li><a href="/beer/beer.html">Retired</a></li>
-          <% if current_page.data.store? %>
+        </ul>
+      <% end %>
+      <% if current_page.data.store? %>
+        <ul class="subnav nav-list" data-group="beers">
+          <li class="active"><a href="/beer/beer.html">Apparel</a></li>
+          <li><a href="/beer/beer.html">Headware</a></li>
+          <li><a href="/beer/beer.html">Barware</a></li>
+          <li><a href="/beer/beer.html">Specialty</a></li>
+          <li><a href="/beer/beer.html">Posters</a></li>
           <li class="search">
             <form class="search-form">
               <div class="form-group">
@@ -34,7 +42,6 @@
               </div>
             </form>
           </li> <!-- /search -->
-        <% end %>
         </ul>
       <% end %>
     </nav> <!-- /site-nav -->
