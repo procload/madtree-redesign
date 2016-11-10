@@ -82,9 +82,11 @@
 @import "pages/employees";
 @import "pages/events";
 @import "pages/home";
+@import "pages/interstitial";
 @import "pages/store_category";
 @import "pages/store_detail";
 @import "pages/store_index";
+@import "pages/store_search";
 @import "pages/taproom";
 @import "pages/tours";
 
@@ -312,4 +314,3 @@
     font-size: calc-em(14px);
   }
 }
-

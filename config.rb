@@ -1,5 +1,7 @@
 activate :livereload
 
+page "/interstitial.html", :layout => "interstitial"
+
 ###
 # Helpers
 ###
@@ -32,4 +34,3 @@ configure :build do
   # require "middleman-smusher"
   # activate :smusher
 end
-

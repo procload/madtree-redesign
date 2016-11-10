@@ -97,7 +97,7 @@ body.store-category {
       display: block;
       font-size: calc-em(16px);
       font-weight: 500;
-      font-family: $font-family-headings; 
+      font-family: $font-family-headings;
       text-transform: uppercase;
 
       @include respond-to(38.75em) {

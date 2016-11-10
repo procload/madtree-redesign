@@ -1,0 +1,32 @@
+body.store-search {
+
+  .main-content {
+    margin-bottom: calc-em(64px);
+  }
+
+  .search-header {
+    margin-bottom: calc-em(32px);
+    h3 {
+      font-size: calc-em(32px);
+
+      span {
+        color: $gray-light;
+      }
+    }
+  }
+  
+  .products {
+    @extend %group;
+
+    .product-preview {
+      @include span-columns(6);
+      @include omega(2n);
+
+      @include respond-to(37.5em) {
+        @include omega-reset(2n);
+        @include span-columns(3);
+        @include omega(4n);
+      }
+    }
+  }
+}
